@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <!-- Inclure jQuery (avant Bootstrap) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.google.com/specimen/Libre+Franklin" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Inclure Bootstrap CSS (vous pouvez utiliser un CDN ou un fichier local) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Inclure Bootstrap JavaScript (après jQuery) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      div {
+        margin-left: 96px;
+        margin-right: 96px;
+      }
+    </style>
   </head>
-
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
-    <%= yield %>
-  </body>
+    <body>
+      <%= render "shared/navbar" %>
+      <%= yield %>
+       <%= render "shared/footer" %>
+    </body>
 </html>

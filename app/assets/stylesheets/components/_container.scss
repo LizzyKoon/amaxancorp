@@ -1,0 +1,30 @@
+.container-fluid {
+  padding: 0;
+}
+
+.container-conseils {
+  display: flex; /* Utilisez Flexbox pour aligner les éléments enfants */
+  justify-content: space-between; /* Alignez les éléments en les espaçant équitablement */
+  align-items: flex-start;
+  width: 900px;
+  margin: auto;
+}
+
+@media(max-width: 900px) {
+  .container-conseils {
+    width: 500px;
+  }
+}
+
+@media(max-width: 500px) {
+  .container-conseils {
+    width: 300px;
+  }
+}
+
+
+.gest-pat, .inv-fin {
+  flex: 1; /* Faites en sorte que chaque bloc de texte prenne une part égale de l'espace disponible */
+  padding: 20px; /* Ajoutez de la marge pour l'apparence */
+  border: 1px solid #ccc; /* Ajoutez une bordure pour la délimitation */
+}

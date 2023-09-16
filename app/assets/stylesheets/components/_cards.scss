@@ -1,0 +1,30 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  margin:0;
+}
+
+.cards-left,
+.cards-right {
+  display: flex;
+  flex-direction: column;
+  margin:0;
+}
+
+.cards-right {
+  padding-top: 65px;
+}
+
+.card {
+  background-color: #fff; /* Couleur de fond des rectangles */
+  height: 65px; /* Hauteur des rectangles (ajustez selon vos besoins) */
+  width: 400px; /* Largeur des rectangles (ajustez selon vos besoins) */
+  margin: 0; /* Espace entre les rectangles (ajustez selon vos besoins) */
+  border-radius: 0 !important;
+  margin-top:65px;
+  text-align: center;
+  align-items: flex-end;
+  padding-right: 20px;
+}

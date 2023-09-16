@@ -1,12 +1,50 @@
-.navbar-lewagon {
+
+.navbar {
   justify-content: space-between;
   background: white;
+  /* Supprime tout le rembourrage */
+  height: 96px;
+  padding: 0;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar .navbar-brand h1 {
+ margin:0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+.navbar .navbar-collapse {
+flex-grow: 0;
 }
+
+.nav-item a {
+ color: #070B81;
+ font-family: $body-font;
+}
+
+
+.dropdown-menu {
+  background-color: #070B81; /* Couleur de fond du menu déroulant */
+}
+
+// /* Style pour les liens du menu déroulant */
+.dropdown-menu .dropdown-item {
+  color: #070B81; /* Couleur du texte des liens du menu déroulant */
+ }
+
+// /* Style pour les liens du menu déroulant au survol */
+.dropdown-menu .dropdown-item:hover {
+   background-color: #070B81; /* Couleur de fond des liens au survol */
+   color: #070B81; /* Couleur du texte des liens au survol */
+}
+
+// /* Style pour le lien "Expertises" dans la barre de navigation au survol */
+.navbar .nav-link:hover {
+   background-color: transparent; /* Retirer la couleur de fond au survol */
+   color: #070B81; /* Couleur du texte au survol */
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  /* Autres styles de votre barre de navigation */
+ }
