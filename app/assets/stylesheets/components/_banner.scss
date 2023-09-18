@@ -8,7 +8,18 @@
     letter-spacing: 1px;
     text-align: center;
     text-underline-position: auto;
-    line-height: 100%;
+  }
+  h2 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: $headers-font;
+    letter-spacing: 2.1px;
+    text-align: center;
+    text-underline-position: auto;
+  }
+  h2 span{
+    font-size: 24px;
   }
 }
 
@@ -31,16 +42,6 @@
   }
 }
 
-.white {
-  color: white;
-}
-
-.blue {
-  h1 {
-    color: $blue;
-  }
-}
-
 .banner-content {
   min-height: 100vh;
   width: 100%;
@@ -54,24 +55,38 @@
   background-position: center;
 }
 
-.banner-beige {
-  background-color: rgba(131, 109, 109, 0.11);
+.banner-conseil {
+  height: 1300px;
+  h3 {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: $headers-font;
+    letter-spacing: 2.1px;
+    text-align: center;
+    text-underline-position: auto;
+  }
 }
 
-.banner-conseil {
-  height: 900px;
+.banner-expertise {
+  padding-left: 0;
+  padding-right: 0;
+  p {
+    align-items: center;
+    font-size: 18px;
+    font-family: $headers-font;
+    text-align: center;
+    text-underline-position: auto;
+    padding-top: 10px;
+  }
+
 }
 
 .banner-vision {
-  height: 700px;
+  height: 850px;
 }
 
 .banner-gradient {
   background: linear-gradient($blue-pastel, $pink-pastel);
-}
-
-.banner-expertise {
-  height: 700px;
 }
 
 .banner-approche {
@@ -80,4 +95,16 @@
 
 .CTA {
   height: 400px;
+}
+
+.white {
+  color: white;
+}
+
+.blue {
+  color: $blue;
+}
+
+.banner-beige {
+  background-color: rgba(131, 109, 109, 0.11);
 }

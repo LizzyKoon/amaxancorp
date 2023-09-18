@@ -3,28 +3,84 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0;
-  margin:0;
+  margin: 0;
+}
+
+.card {
+  background-color: white; /* Couleur de fond des rectangles */
+  color: $blue;
+  font-size: 10px;
+  font-weight: 500;
+  height: 65px; /* Hauteur des rectangles (ajustez selon vos besoins) */
+  width: 640px; /* Largeur des rectangles (ajustez selon vos besoins) */
+  margin: 0; /* Espace entre les rectangles (ajustez selon vos besoins) */
+  border-radius: 0 !important;
+  margin-top: 65px;
+  text-transform: uppercase;
+  border: none !important;
+  display: flex; /* Add this to make the text centering work */
+  justify-content: center; /* Center horizontally within the card */
+  h3 {
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $headers-font;
+    text-underline-position: auto;
+    padding-top: 10px;
+    letter-spacing: 1px;
+  }
 }
 
 .cards-left,
 .cards-right {
   display: flex;
   flex-direction: column;
-  margin:0;
+  margin: 0;
 }
 
 .cards-right {
   padding-top: 65px;
+  h3 {
+    text-align: left;
+    padding-left: 25px;
+   }
 }
 
-.card {
-  background-color: #fff; /* Couleur de fond des rectangles */
-  height: 65px; /* Hauteur des rectangles (ajustez selon vos besoins) */
-  width: 400px; /* Largeur des rectangles (ajustez selon vos besoins) */
-  margin: 0; /* Espace entre les rectangles (ajustez selon vos besoins) */
-  border-radius: 0 !important;
-  margin-top:65px;
-  text-align: center;
-  align-items: flex-end;
-  padding-right: 20px;
+.cards-left {
+  h3 {
+    text-align: right;
+    padding-right: 25px;
+   }
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+
+.cards-bilan {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.card-bilan {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  margin: 0;
+  padding: 30px;
+  text-align:justify;
+  width: 380px;
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
 }
