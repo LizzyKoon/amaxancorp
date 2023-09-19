@@ -11,7 +11,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1em;
-  margin: 0;
+  margin-top: 30px;
   opacity: 1;
   outline: 0;
   padding: 1.5em 2.2em;
@@ -20,7 +20,7 @@
   text-decoration: none;
   text-rendering: geometricprecision;
   text-transform: uppercase;
-  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -34,7 +34,11 @@
   backface-visibility: hidden;
   background-color: #EBEBEB;
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-  content: "";
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "EN SAVOIR PLUS";
   height: 100%;
   left: 0;
   position: absolute;
@@ -56,7 +60,7 @@
 }
 
 .button-48:after {
-  background-color: #FFFFFF;
+  color: $blue;
 }
 
 .button-48 span {
