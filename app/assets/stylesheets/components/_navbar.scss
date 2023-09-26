@@ -19,56 +19,61 @@
 }
 
 /* Style the navigation menu */
-nav ul {
+
+ul {
+  background: darkorange;
   list-style: none;
-  display: flex;
-  gap: 20px;
   margin: 0;
+  padding-left: 0;
 }
 
-nav li {
+li {
+  color: #fff;
+  background: darkorange;
+  display: block;
+  float: left;
+  padding: 1rem;
   position: relative;
-}
-
-nav a {
   text-decoration: none;
-  color: $blue;
-  font-weight: bold;
-  font-size: 16px;
-  padding-left: 32px;
-  display: block;
+  transition-duration: 0.5s;
 }
 
-/* Style the dropdown menu */
-.dropdown:hover .dropdown-menu {
-  display: block;
+li a {
+  color: #fff;
 }
 
-.dropdown-menu {
-  display: none;
+li:hover,
+li:focus-within {
+  background: red;
+  cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background: orange;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
   position: absolute;
-  top: 100%;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
   left: 0;
-  background-color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
-.dropdown-menu li {
-  padding: 10px 15px;
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
 }
 
-/* Add styles for responsive design if needed */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav li {
-    margin-top: 10px;
-  }
+ul li ul li {
+  clear: both;
+  width: 100%;
 }
