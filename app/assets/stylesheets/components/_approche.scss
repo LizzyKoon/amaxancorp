@@ -1,0 +1,31 @@
+.approche-1 {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  h2 {
+    text-align: left;
+  }
+}
+
+.approche-2 {
+  margin-top: 96px;
+  h2 {
+    text-align: right;
+  }
+  p {
+    margin-top: 96px;
+  }
+}
+
+.large-number {
+  font-size: 50px; /* Modifiez cette valeur selon la taille de police souhaitée */
+  h2 span{
+    font-size: 36px;
+  }
+}
+
+.small-text {
+  font-size: 24px; /* Modifiez cette valeur selon la taille de police souhaitée pour le texte superposé */
+  position: relative;
+  top: -20px;
+  left: -19px;/* Ajustez cette valeur pour régler la position verticale du texte superposé */
+}

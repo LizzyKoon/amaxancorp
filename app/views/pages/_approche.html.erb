@@ -1,34 +1,36 @@
 <div class="banner banner-gradient banner-approche white">
   <div class="container">
     <h1>Une Approche en 2 étapes.</h1>
-    <h2>ANALYSER VOTRE SITUATION</h2>
-    <p>Nous analyserons d’abord votre situation au travers d’outils pragmatiques :</p>
+    <div class="approche-1">
+      <h2><span class="large-number">1.</span> <sup class="small-text">ANALYSER VOTRE SITUATION</sup></h2>
+      <p>Nous analyserons d’abord votre situation au travers d’outils pragmatiques :</p>
 
-    <div class="cards-bilan">
-      <div class="card-bilan">
-        <h2>BILAN PATRIMONIAL</h2>
-        <p>Pour étudier la structure de votre patrimoine, les flux de revenus et charges 
-        </p>
-      </div>
-      <div class="card-bilan">
-        <h2>BILAN FISCAL</h2>
-        <p>Pour auditer et valider vos déclarations et l’utilisation de vos outils de défiscalisation :
-        dispositifs législatifs, crédits et réductions d’impôt, prélèvements forfaitaires libératoires. 
-        </p>
-      </div>
-       <div class="card-bilan">
-        <h2>BILAN SOCIAL</h2>
-        <p>Pour évaluer et diagnostiquer votre niveau de protection et celui de votre famille 
-        </p>
-      </div>
-      <div class="card-bilan">
-        <h2>BILAN RETRAITE</h2>
-        <p>Pour vous dire pourquoi et comment votre relevé de carrière peut vous éviter de futures erreurs et oublis.
-        </p>
+      <div class="cards-bilan">
+        <div class="card-bilan">
+          <h2>BILAN PATRIMONIAL</h2>
+          <p>Pour étudier la structure de votre patrimoine, les flux de revenus et charges 
+          </p>
+        </div>
+        <div class="card-bilan">
+          <h2>BILAN FISCAL</h2>
+          <p>Pour auditer et valider vos déclarations et l’utilisation de vos outils de défiscalisation :
+          dispositifs législatifs, crédits et réductions d’impôt, prélèvements forfaitaires libératoires. 
+          </p>
+        </div>
+        <div class="card-bilan">
+          <h2>BILAN SOCIAL</h2>
+          <p>Pour évaluer et diagnostiquer votre niveau de protection et celui de votre famille 
+          </p>
+        </div>
+        <div class="card-bilan">
+          <h2>BILAN RETRAITE</h2>
+          <p>Pour vous dire pourquoi et comment votre relevé de carrière peut vous éviter de futures erreurs et oublis.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="elaborer-strategies">
-      <h2>ELABORER DES STRATÉGIES ADAPTÉES ET ADAPTABLES</h2>
+    <div class="approche-2">
+      <h2><span class="large-number">2.</span> <sup class="small-text">VOUS CONSEILLER</sup></h2>
       <p>Viens ensuite l’étape difficile qui permet de rapprocher vos besoins et
       les moyens dont vous disposez pour y parvenir. C’est l’écart entre désirs et réalités.
       </br>
@@ -48,7 +50,38 @@
       Un recueil d’Information pour collecter vos connaissances  et expériences financières, votre tolérance au risque, aux pertes, vos objectifs et votre horizon de placement
       Un document de déclaration d’adéquation expliquant dans quelle mesure la recommandation est adaptée accompagnée des Documents d’Informations Clés des supports d’investissement.
       </p>
-
     </div>
   </div>
 </div>
+
+<script>
+  console.log("Le code JavaScript s'exécute ici.");
+
+  // Sélectionnez les éléments que vous souhaitez afficher au défilement
+  const cardBilanElements = document.querySelectorAll('.card-bilan');
+
+  // Options pour l'Intersection Observer
+  const cardBilanOptions = {
+    root: null, // Utilise la fenêtre par défaut comme zone d'affichage
+    rootMargin: '0px', // Aucune marge autour de la fenêtre d'affichage
+    threshold: 0.5, // Au moins 50% de l'élément doit être visible
+  };
+
+  // Fonction callback à exécuter lorsque les cartes sont visibles
+  function handleCardBilanIntersection(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-card');
+        // Vous pouvez également effectuer d'autres actions ici lorsque la carte est visible
+      }
+    });
+  }
+  // Créer un nouvel objet Intersection Observer avec la fonction de rappel
+  const cardBilanObserver = new IntersectionObserver(handleCardBilanIntersection, cardBilanOptions);
+
+  // Ajouter chaque carte à l'observateur
+  cardBilanElements.forEach(card => {
+    cardBilanObserver.observe(card);
+  });
+
+</script>

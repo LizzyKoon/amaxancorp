@@ -6,54 +6,47 @@
     </div>
     <div class="cards">
       <div class="cards-left">
-        <div class="card">
-          <h3>Famille</h3>
-        </div>
-        <div class="card">
-          <h3>Entrepreneurs <br>
-          & Professions Libérales</h3>
-        </div>
-        <div class="card">
-          <h3>Assistance Administrative</h3>
-        </div>
+        <%= link_to "Famille", famille_path, class: "card" %>
+        <%= link_to "Entrepreneurs & Professions Libérales", entrepreneurs_path, class: "card" %>
+        <%= link_to "Assistance Administrative", assistance_administrative_path, class: "card" %>
       </div>
       <div class="cards-right">
-        <div class="card">
-          <h3>Placement</h3>
-        </div>
-        <div class="card">
-          <h3>Emprunt</h3>
-        </div>
-        <div class="card">
-          <h3>Fiscalité</h3>
-        </div>
+        <%= link_to "Placement", placement_path, class: "card" %>
+        <%= link_to "Emprunt", emprunt_path, class: "card" %>
+        <%= link_to "Fiscalité", fiscalite_path, class: "card" %>
       </div>
     </div>
   </div>
 </div>
 
-<%# <script>
+<script>
   console.log("Le code JavaScript s'exécute ici.");
+// Sélectionnez les éléments que vous souhaitez afficher au défilement
+  const cards = document.querySelectorAll('.card');
 
-  // Fonction pour afficher les éléments "hidden" s'ils sont visibles à l'écran
-  function handleScroll() {
-    var hiddenCards = document.querySelectorAll('.card.hidden');
+  // Options pour l'intersection Observer
+  const options = {
+    root: null, // Utilise la fenêtre par défaut comme zone d'affichage
+    rootMargin: '0px', // Aucune marge autour de la fenêtre d'affichage
+    threshold: 0.5, // Au moins 50% de l'élément doit être visible
+  };
 
-    hiddenCards.forEach(function(card) {
-      var rect = card.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        card.classList.remove('hidden');
+  // Fonction callback à exécuter lorsque les cartes sont visibles
+  function handleCardIntersection(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-card');
+        // Vous pouvez également effectuer d'autres actions ici lorsque la carte est visible
       }
     });
   }
 
-  // Ajouter un écouteur d'événements de défilement avec un délai de 100 ms
-  var scrollTimeout;
-  window.addEventListener('scroll', function() {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(handleScroll, 100);
+  // Créer un nouvel objet IntersectionObserver avec la fonction de rappel
+  const cardObserver = new IntersectionObserver(handleCardIntersection, options);
+
+  // Ajouter chaque carte à l'observateur
+  cards.forEach(card => {
+    cardObserver.observe(card);
   });
 
-  // Appel initial pour gérer les éléments visibles lorsque la page se charge
-  handleScroll();
-</script> %>
+</script>
