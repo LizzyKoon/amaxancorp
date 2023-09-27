@@ -24,33 +24,33 @@ ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  text-decoration: none;
 }
 
 li {
   color: $blue;
   display: block;
   float: left;
-  padding: 1rem;
+  padding-left: 40px;
   position: relative;
-  text-decoration: none;
+  text-decoration: none !important; /* Supprime la décoration du texte */
   transition-duration: 0.5s;
 }
 
 li a {
   color: $blue;
   font-weight: 600;
+  text-decoration: none;
 }
 
 li:hover,
 li:focus-within {
   cursor: pointer;
-  text-decoration: none;
+  /* text-decoration: none; Ne pas réappliquer la décoration du texte ici */
 }
 
 li:focus-within a {
   outline: none;
-  text-decoration: none;
+  text-decoration: none !important; /* Supprime la décoration du texte */
 }
 
 ul li ul {
@@ -62,20 +62,19 @@ ul li ul {
   margin-top: 1rem;
   left: 0;
   display: none;
-  text-decoration: none;
 }
 
 ul li:hover > ul,
 ul li:focus-within > ul,
 ul li ul:hover,
 ul li ul:focus {
-   visibility: visible;
-   opacity: 1;
-   display: block;
-   text-decoration: none;
+  visibility: visible;
+  opacity: 1;
+  display: block;
 }
 
 ul li ul li {
   clear: both;
   width: 100%;
+  padding: 1rem;
 }
