@@ -34,35 +34,36 @@
 </div>
 
 <script>
-  console.log("Le code JavaScript s'exécute ici.");
-// Sélectionnez les éléments que vous souhaitez afficher au défilement
-  const cards = document.querySelectorAll('.card');
+  const cardOrder = [
+    ".famille",
+    ".placement",
+    ".entrepreneurs",
+    ".emprunt",
+    ".assistance",
+    ".fiscalite"
+  ];
 
-  // Options pour l'intersection Observer
-  const options = {
-    root: null, // Utilise la fenêtre par défaut comme zone d'affichage
-    rootMargin: '0px', // Aucune marge autour de la fenêtre d'affichage
-    threshold: 0.5, // Au moins 50% de l'élément doit être visible
-  };
+  const cards = cardOrder.map(selector => document.querySelector(selector));
+  const windowHeight = window.innerHeight;
 
-  // Fonction callback à exécuter lorsque les cartes sont visibles
-  function handleCardIntersection(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show-card');
-        // Vous pouvez également effectuer d'autres actions ici lorsque la carte est visible
-      }
-    });
+  function handleScroll() {
+    const firstCard = cards[0];
+    const rect = firstCard.getBoundingClientRect();
+    const cardHeight = rect.height;
+
+    if (rect.top + cardHeight / 2 <= windowHeight / 2) {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show-card');
+        }, index * 250); // Ajoute un délai pour afficher chaque carte
+      });
+
+      // Désactive l'écouteur d'événement après l'affichage des cartes
+      window.removeEventListener('scroll', handleScroll);
+    }
   }
 
-  // Créer un nouvel objet IntersectionObserver avec la fonction de rappel
-  const cardObserver = new IntersectionObserver(handleCardIntersection, options);
-
-  // Ajouter chaque carte à l'observateur
-  cards.forEach(card => {
-    cardObserver.observe(card);
-  });
-
+  window.addEventListener('scroll', handleScroll);
 </script>
 
 <script>
