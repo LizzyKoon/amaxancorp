@@ -1,67 +1,300 @@
-<div class="banner banner-beige banner-contact blue">
-  <div class="container-contact">
-    <div class="get-in-touch-block">
-      <div class="left-text">
-        <h1>Contactez-nous</h1>
-        <p>XXXXXXX</p>
-        <div class="phone-block">
-          <img src="https://assets.website-files.com/60ddba0df214bc3536a77958/60e80fd7aae85b700c976c85_Phone.svg" loading="lazy" alt="" class="image-73">
-          <a href="tel:(833)836-4832" class="link-2">(833) 836-4832</a>
-        </div>
-        <div class="email-block">
-          <img src="https://assets.website-files.com/60ddba0df214bc3536a77958/60e810b71825f3abb048f97c_Mail_inverse.svg" loading="lazy" alt="" class="image-74">
-          <a href="mailto:team@cheerity.com" class="link-3">team@cheerity.com</a>
-        </div>
-        <div class="web-links">
-          <a href="https://www.linkedin.com/company/cheerity/" class="link-block-4 w-inline-block">
-            <img src="https://assets.website-files.com/60ddba0df214bc3536a77958/60e81f3fa1f5c978361cd594_Social%20Icons.svg" loading="lazy" width="40" height="40" alt="" class="image-143">
-          </a>
-        </div>
-      </div>
-      <div class="right-form">
-        <div class="form-container">
-          <div class="form-block-2 w-form">
-            <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form" method="get" class="form-3" aria-label="Contact Form">
-              <div class="contact-form-grid-2">
-                <div class="div-block-30">
-                  <label for="First-Name-3" id="contact-first-name" class="field-label-contact">Nom<span class="text-span-8">*</span></label>
-                  <input type="text" class="text-field-5 w-input" maxlength="256" name="First-Name-2" data-name="First Name 2" placeholder="" id="First-Name-2" required="">
-                </div>
-                <div class="div-block-31">
-                  <label for="Last-Name-3" id="contact-last-name" class="field-label-contact">Company Name <span class="text-span-9">*</span></label>
-                  <input type="text" class="text-field-6 w-input" maxlength="256" name="Last-Name-2" data-name="Last Name 2" placeholder="" id="Last-Name-2" required="">
-                </div>
-                <div class="div-block-32">
-                  <label for="Email-6" id="contact-email" class="field-label-contact">Email<span class="text-span-10">*</span></label>
-                  <input type="email" class="text-field-7 w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="" id="Email-4" required="">
-                </div>
-                <div class="div-block-33">
-                  <label for="Contact-Phone-Number-3" id="contact-phone" class="field-label-contact">Numéro de Téléphone</label>
-                  <input type="tel" class="text-field-8 w-input" maxlength="256" name="Contact-Phone-Number-2" data-name="Contact Phone Number 2" placeholder="" id="Contact-Phone-Number-2">
-                </div>
-                <div class="div-block-34">
-                  <label for="Message-2" id="contact-message" class="field-label-contact">Message</label>
-                  <textarea data-name="Message 2" maxlength="5000" id="Message-2" name="Message-2" placeholder="Message" class="textarea-2 w-input"></textarea>
-                </div>
-                <div class="form-horizontal-button-block">
-                 <input type="submit" value="Submit" data-wait="Please wait" class="primary-button w-button">
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 30px;
+        }
+
+          .contact-info {
+            margin-left: 0;
+            h1 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            }
+          }
+
+        .contact-form {
+            flex: 1;
+            margin: 0;
+            background-color: white;
+            border-radius: 5px;
+            padding-top: 30px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+
+        .contact-info {
+            display: flex; /* Use flexbox to control alignment */
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the left (start) */
+            width: 33%;
+            margin-right: 0;
+        }
+
+        .contact-details {
+            margin: 0;
+        }
+
+        .contact-phone,
+        .contact-email {
+            display: flex;
+            align-items: center;
+            margin:0;
+        }
+
+        .contact-phone i,
+        .contact-email i {
+            color: #070b81;
+            margin-right: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group {
+            flex: 1;
+            margin: 10px; /* Réduit l'espace entre les éléments */
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #f1efef;
+            border-radius: 5px;
+            margin: 0;
+            color: #999;
+        }
+
+        .form-group.wide-input {
+            width: 100%;
+        }
+
+        /* Augmenter la hauteur de la zone de texte */
+        #message {
+            width: 100%; /* Prend toute la largeur du formulaire */
+            height: 200px; /* Vous pouvez ajuster cette valeur selon vos préférences */
+        }
+
+        /* Placeholder en gris plus clair */
+        #message::placeholder {
+            color: #999;
+            font-weight: 100;
+        }
+
+        .contact-form-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px; /* Réduit l'espace entre les éléments de la grille */
+            margin-left: auto;
+            margin-right: auto; /* Réduit l'espace en haut de la grille */
+        }
+
+        /* Ajout de styles pour le bouton */
+        .button-form {
+            width: 100%; /* Le bouton prend toute la largeur du formulaire */
+            padding: 10px;
+            background-color: #070B81;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-form-block {
+          justify-content: flex-start;
+          align-items: center;
+          display: flex;
+        }
+/* Style the Select2 container */
+        /* Style the Select2 container */
+      .select2-container--default .select2-selection--multiple {
+      border: 1px solid #f1efef;
+      border-radius: 5px;
+      background-color: white;
+      color: white;
+      cursor: pointer;
+      padding: 10px; /* Ajustez la hauteur selon vos préférences */
+      max-height: 150px; /* Set a maximum height for the Select2 container */
+      overflow-y: auto; /* Add vertical scroll if needed */
+      position: relative; /* Make the container a positioning context */
+      z-index: 1; /* Set a higher z-index to ensure it appears above other elements */
+  }
+
+/* Style the Select2 clear button */
+    .select2-container--default .select2-selection--multiple .select2-selection__clearable {
+        position: absolute;
+        top: 10px; /* Adjust the top position as needed */
+        right: 10px; /* Adjust the right position as needed */
+        z-index: 2; /* Set a higher z-index than the container */
+        color: white;
+        padding-bottom: 15px;
+    }
+
+      .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        background-color: #070B81;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        margin: 0;
+        margin-left: 5px;
+        padding-left: 15px;
+        padding-right: 5px;
+        margin-top: 5px;
+      }
+
+      .select2-container--default .select2-selection--multiple .select2-selection__choice_display {
+        padding-right: 10px;
+        padding-left: 15px;
+
+      }
+      /* Style the Select2 search input */
+
+      /* Ajustez la couleur du placeholder pour Select2 */
+      .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+          color: white; /* Texte blanc pour le placeholder */
+      }
+
+      .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+        color: white;
+        border: none;
+        padding-left: 10px;
+        background-color: #070B81;
+      }
+
+      .select2-container--default .select2-search--inline .select2-search__field {
+              width: 100%;
+              border: none;
+              padding: 0;
+              margin: 0;
+              color: white; /* Texte blanc dans le champ de recherche */
+          }
+
+      /* Style the Select2 dropdown arrow */
+      .select2-container--default .select2-selection__arrow {
+          top: 50%;
+          transform: translateY(-50%);
+          color: white; /* Couleur de la flèche en blanc */
+      }
+
+      /* Ciblez le texte du placeholder dans Select2 */
+      .select2-container--default .select2-selection--multiple .select2-selection__rendered::placeholder {
+        font-family: "Libre Franklin", sans-serif; /* Remplacez "VotrePolice" par le nom de la police souhaitée */
+        font-style: italic; /* Style de police (italique, si nécessaire) */
+        color: #f1efef; /* Couleur du texte du placeholder */
+        /* Autres styles de police selon vos préférences */
+      }
+
+      select[multiple]:focus option:checked {
+        background: red linear-gradient(0deg, red 0%, red 100%);
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="banner banner-beige banner-contact blue">
+      <div class="contact-container">
+         <div class="contact-info" style="margin-right:0; width=33%;">
+              <h1>Contact</h1>
+              <div class="contact-details" style="margin:0;">
+                  <div class="contact-phone">
+                      <p>
+                          <span style="display: inline-block; margin-right: 10px;">
+                              <i class="fa-solid fa-phone" style="color: #070b81;"></i>
+                          </span>
+                          +33 6 43 83 18 04
+                      </p>
+                  </div>
+                  <div class="contact-email">
+                      <p>
+                          <span style="display: inline-block; margin-right: 10px;">
+                              <i class="fa-solid fa-envelope" style="color: #070b81;"></i>
+                          </span>
+                          amaxan@gmail.com
+                      </p>
+                  </div>
               </div>
-            </form>
-            <div class="success-message w-formdone" tabindex="-1" role="region" aria-label="Contact Form Success">
-              <img src="https://assets.website-files.com/60ddba0df214bc3536a77958/611e821eea6d32828facd445_giphy.gif" loading="lazy" alt="" class="image-193">
-              <div class="div-block-117">Merci!</div>
-              <div class="text-block-89">
-                Nous avons bien reçu votre message
-                <br>
-                et revenons vers vous très rapidement.
-              </div>
-            </div>
-            <div class="error-message-2 w-form-fail" tabindex="-1" role="region" aria-label="Contact Form Failure">
-              <div class="div-block-118">Quelque chose n'a pas marché en soumettant le formulaire.</div>
-            </div>
           </div>
-        </div>
+          <div class="contact-form" style="width:66%;">
+              <form action="#" method="post">
+                <div class="contact-form-grid-2">
+                  <div class="form-group">
+                      <label for="nom">Nom</label>
+                      <input type="text" id="nom" name="nom" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="expertise">Expertises</label>
+                      <select id="expertise" name="expertise[]" class="form-group" multiple>
+                          <option value="famille">Famille</option>
+                          <option value="placement">Placement</option>
+                          <option value="entrepreneurs">Entrepreneurs</option>
+                          <option value="emprunt">Emprunt</option>
+                          <option value="assistance">Assistance Administrative</option>
+                          <option value="fiscalite">Fiscalité</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="mail">Email</label>
+                      <input type="email" id="mail" name="mail" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="telephone">Téléphone</label>
+                      <input type="tel" id="telephone" name="telephone" required>
+                  </div>
+                  <div class="form-group" style="grid-column: span 2;"> <!-- Permet au champ de message de prendre toute la largeur -->
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" class="wide-input" placeholder="Message" required style="font-weight: lighter;"></textarea>
+                  </div>
+                  <div class="button-form-block">
+                    <input type="submit" value="ENVOYER" data-wait="Please wait" class="button-form">
+                  </div>
+                </div> <!-- Bouton sous le champ de message -->
+            </form>
+          </div>
       </div>
-    </div>
   </div>
+
+
+  <script>
+    // Initialize Select2 on the select element
+    // Initialize Select2 on the select element
+$(document).ready(function() {
+    $('#expertise').select2({
+        placeholder: 'Sélectionnez une ou plusieurs expertises', // Placeholder text
+        allowClear: true, // Option to clear selection
+        closeOnSelect: false, // Keep the dropdown open after selection
+    });
+});
+
+  </script>
+
+</body>
+</html>

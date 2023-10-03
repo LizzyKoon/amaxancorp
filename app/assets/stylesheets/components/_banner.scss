@@ -1,12 +1,10 @@
 .banner {
   padding: 96px;
   h1 {
-    align-items: center;
     font-weight: bold;
     font-size: 28px;
     font-family: $headers-font;
     letter-spacing: 1px;
-    text-align: center;
     text-underline-position: auto;
   }
   h2 {
@@ -34,6 +32,7 @@
     font-size: 38px;
     font-family: $headers-font;
     letter-spacing: 1px;
+    text-align: center;
     text-align: left;
   }
   h2 span{
@@ -52,10 +51,28 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+  }
 }
 
 .banner-conseil {
   height: 1300px;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+  }
   h3 {
     font-weight: bold;
     font-size: 18px;
@@ -72,6 +89,15 @@
 .banner-expertise {
   padding-left: 0;
   padding-right: 0;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+  }
   h2 {
     text-align: center;
     }
@@ -87,6 +113,15 @@
 
 .banner-vision {
   height: 850px;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+  }
 }
 
 .banner-gradient {
@@ -95,6 +130,17 @@
 
 .banner-approche {
   height: 1800px;
+}
+
+.banner-contact {
+  h1 {
+  align-items: left;
+  text-align: left;
+  }
+}
+
+.banner-placer {
+  height: 200px;
 }
 
 .CTA {
