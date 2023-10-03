@@ -140,7 +140,23 @@
 }
 
 .banner-placer {
-  height: 200px;
+  background-color: $blue;
+  height: 100px;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: left;
+  }
 }
 
 .CTA {

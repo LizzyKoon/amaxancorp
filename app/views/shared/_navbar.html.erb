@@ -7,12 +7,12 @@
         <li class="dropdown">
           <a href="#">Expertises</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Famille</a></li>
-            <li><a href="#">Entreprendre</a></li>
-            <li><a href="#">Assistance Administrative</a></li>
-            <li><a href="#">Placer</a></li>
-            <li><a href="#">Emprunter</a></li>
-            <li><a href="#">Fiscalité</a></li>
+           <li><%= link_to "Famille", famille_path %></li>
+            <li><%= link_to "Entrepreneurs & Professions Libérales", entrepreneurs_path %></li>
+            <li><%= link_to "Assistance Administrative", assistance_administrative_path %></li>
+            <li><%= link_to "Placement", placement_path %></li>
+            <li><%= link_to "Emprunt", emprunt_path %></li>
+            <li><%= link_to "Fiscalité", fiscalite_path %></li>
           </ul>
         </li>
         <li><a href="#">Méthodologie</a></li>
@@ -21,3 +21,5 @@
     </nav>
   </div>
 </div>
+
+
