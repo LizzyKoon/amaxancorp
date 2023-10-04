@@ -5,24 +5,72 @@
   font-family: $body-font; /* Utilisez la police Roboto depuis Google Fonts */
 }
 
+.banner-placer {
+  background-color: #070B81;
+  height: 96px;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 96px;
+  z-index: 100; /* Au-dessus du titre FAQ */
+}
+
+.banner-placer h1 {
+  align-items: center;
+  font-size: 38px;
+  font-family: $headers-font;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   max-width: 75%;
   margin: auto;
-  margin-top: 48px;
+  padding-top: 96px;/* Ajustez la marge pour correspondre à la hauteur de la bannière */
 }
 
 .title-FAQ {
+  background-color: white;
+  height: 96px;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 192px;
+  z-index: 100; /* Au-éfinissez la position sticky en haut de la page */
+}
+
+.title-FAQ h1 {
+  align-items: center;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: $headers-font;
+  letter-spacing: 1px;
+  color: $blue;
+}
+/* Le reste de votre code CSS reste inchangé */
+.faq-container {
+  flex-grow: 1;
+  padding: 0;
+  background-color: white;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
   margin-top: 48px;
-  margin-bottom: 48px;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: center;
-    color: $blue;
-  }
+  margin-bottom: 96px;
+  z-index: 80; /* Ajoutez une marge pour éviter de superposer le contenu sous la bannière et le titre FAQ */
 }
 
 .accordion {
@@ -60,26 +108,28 @@
   color: white;
 }
 
+/* Ajout de position et overflow pour les questions FAQ */
 .accordion.open + .pannel {
   background-color: white;
+  position: relative;
+  overflow: auto; /* Ajout du défilement vertical pour les réponses */
+  max-height: 300px; /* Réglez la hauteur maximale souhaitée */
+  padding: 2rem; /* Ajoutez un espace pour le contenu */
 }
 
-.pannel {
-  padding: 2rem 2rem 2rem;
-  overflow: hidden;
-  display: none;
-}
 
 .pannel p {
   color: black;
   font-family: $body-font;
   text-align: justify;
   font-size: 16px;
+  padding-top: 16px;
 }
 
 .faq {
   border: none;
   margin: 10px 0;
+  opacity: 1;
 }
 
 .faq.open {
@@ -90,4 +140,9 @@
 .open {
   background: linear-gradient($blue-pastel, $pink-pastel);
   color: white; /* Pour changer la couleur du texte en blanc lorsque la question est ouverte */
+}
+
+.fade {
+  opacity: 0.7; /* Réglez l'opacité souhaitée */
+  transition: opacity 0.3s ease; /* Ajoutez une transition en douceur */
 }

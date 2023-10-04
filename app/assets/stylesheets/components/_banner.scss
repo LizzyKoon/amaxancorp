@@ -32,7 +32,6 @@
     font-size: 38px;
     font-family: $headers-font;
     letter-spacing: 1px;
-    text-align: center;
     text-align: left;
   }
   h2 span{
@@ -58,7 +57,6 @@
     font-family: $headers-font;
     letter-spacing: 1px;
     text-align: center;
-    text-align: left;
   }
 }
 
@@ -71,7 +69,6 @@
     font-family: $headers-font;
     letter-spacing: 1px;
     text-align: center;
-    text-align: left;
   }
   h3 {
     font-weight: bold;
@@ -82,7 +79,7 @@
     text-underline-position: auto;
   }
   h2 {
-  text-align: center;
+    text-align: center;
   }
 }
 
@@ -96,7 +93,6 @@
     font-family: $headers-font;
     letter-spacing: 1px;
     text-align: center;
-    text-align: left;
   }
   h2 {
     text-align: center;
@@ -120,7 +116,6 @@
     font-family: $headers-font;
     letter-spacing: 1px;
     text-align: center;
-    text-align: left;
   }
 }
 
@@ -136,26 +131,6 @@
   h1 {
   align-items: left;
   text-align: left;
-  }
-}
-
-.banner-placer {
-  background-color: $blue;
-  height: 100px;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 38px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: center;
-    text-align: left;
   }
 }
 
