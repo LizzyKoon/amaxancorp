@@ -5,9 +5,30 @@
       </div>
     </div>
 
+    <div class="banner banner-intro-placer blue">
+        <div class="container-placer">
+            <div class="container-placer-content">
+                <div class="placer-text">
+                   <p>Pour bien choisir vos placements, considérez deux grandes catégories : financiers et immobiliers.</p>
+
+                  <h3>Placements financiers</h3>
+                  <p>Pour des projets à court terme, envisagez des options comme les livrets réglementés, les livrets bancaires non réglementés, les SICAV monétaires, ou les comptes à terme.</p>
+                  <p>Pour des objectifs à plus long terme, explorez le Plan d'Épargne Logement (PEL), le Compte Titres Ordinaire (CTO), et le Plan d'Épargne en Actions (PEA). L'Assurance-Vie et le Plan d'Épargne Retraite (PER) sont également des outils à considérer.</p>
+
+                  <h3>Placements immobiliers</h3>
+                  <p>L'investissement immobilier en France offre des opportunités variées :
+                  choisissez entre la nue-propriété et l'usufruit. Une Société Civile Immobilière (SCI) peut être utile pour gérer un patrimoine.
+                  Le Déficit Foncier réduit l'impôt, la Loi Pinel offre des réductions pour l'investissement locatif, et le statut LMNP est avantageux pour la location meublée.
+                  Le Dispositif De Normandie, lui, encourage la rénovation de logements anciens.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="title-faq">
       <div class="container">
-        <h1>Les réponses à vos questions.</h1>
+        <h1>Quelques réponses à vos questions.</h1>
       </div>
     </div>
 
@@ -15,7 +36,7 @@
 
       <div class="faq-container">
 
-        <div class="faq fade">
+        <div class="faq">
           <button class="accordion">
             Pourquoi et comment investir en actions ?
             <i class="fa-solid fa-chevron-down"></i>
@@ -24,21 +45,21 @@
             <p>
               Comparatif des différents indices sur 30 ans de 1993 et 2023 des différents placements : (source Le Revenu) :
 
-              Hausse des prix 			   +57%
-              Livret A 				   +95%
-              SICAV Monétaires			   +97%
-              Assurance vie en euros			+220%
-              Immobilier à Paris			+241%
-              Actions					+249%
-              OR					+517%
-              Actions avec dividendes réinvestis	+775%
+              Hausse des prix          +57%
+              Livret A           +95%
+              SICAV Monétaires         +97%
+              Assurance vie en euros      +220%
+              Immobilier à Paris      +241%
+              Actions         +249%
+              OR          +517%
+              Actions avec dividendes réinvestis  +775%
 
               Méfions-nous des précautions sémantiques qui disent qu’investir en actions présente un risque de perte en capital et qu’il faut investir qu’une toute petite partie de son capital. Investir en action n’est pas plus risqué que l’immobilier pour celui qui connaît le prix à payer de cet investissement et qui s’engage à le respecter pendant toute la durée de son investissement. Cependant des mauvais choix et un manque de connaissances peuvent entrainer des pertes importantes irrécupérables. Il convient préalablement de déterminer sa capacité à accepter le risque de perte et de définir une stratégie.
             </p>
           </div>
         </div>
 
-        <div class="faq fade">
+        <div class="faq">
           <button class="accordion">
             Comment limiter les risques de pertes et investir sereinement en actions ?
             <i class="fa-solid fa-chevron-down"></i>
@@ -57,7 +78,7 @@
           </div>
         </div>
 
-        <div class="faq fade">
+        <div class="faq">
           <button class="accordion">
             Quel est l’Impact de la fiscalité ?
             <i class="fa-solid fa-chevron-down"></i>
@@ -71,7 +92,7 @@
           </div>
         </div>
 
-        <div class="faq fade">
+        <div class="faq">
           <button class="accordion">
             Quels sont les différents supports de valeurs mobilières?
             <i class="fa-solid fa-chevron-down"></i>
@@ -83,7 +104,7 @@
           </div>
         </div>
 
-        <div class="faq fade">
+        <div class="faq">
           <button class="accordion">
             Comment investir dans la finance durable ?
             <i class="fa-solid fa-chevron-down"></i>
@@ -136,27 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.nextElementSibling.style.display = "none";
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  var titleFAQ = document.querySelector(".title-FAQ");
-  var questions = document.querySelectorAll(".faq");
 
-  window.addEventListener("scroll", function () {
-    var titleFAQBottom = titleFAQ.getBoundingClientRect().bottom;
-
-    questions.forEach(function (question) {
-      var questionTop = question.getBoundingClientRect().top;
-
-      // Calculez la position relative de la question par rapport au titre FAQ
-      var relativePosition = (titleFAQBottom - questionTop) / titleFAQBottom;
-
-      // Assurez-vous que la valeur de l'opacité est comprise entre 0 et 1
-      var opacityValue = Math.min(Math.max(relativePosition, 0), 1);
-
-      // Appliquez l'opacité à la question FAQ
-      question.style.opacity = opacityValue.toFixed(2); // Arrondi à deux décimales
-    });
-  });
-});
 
 </script>
 
