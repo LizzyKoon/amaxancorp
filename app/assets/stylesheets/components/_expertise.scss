@@ -60,11 +60,6 @@
   }
 }
 
-.container-expertise {
-  padding-left:96px;
-  padding-right:96px;
-}
-
 .container-expertise-content {
   display: flex;
   margin: 0;
@@ -196,4 +191,87 @@
 .open {
   background: linear-gradient($blue-pastel, $pink-pastel);
   color: white; /* Pour changer la couleur du texte en blanc lorsque la question est ouverte */
+}
+
+
+/* Ajoutez une règle media query pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+  .banner-expertise {
+    background-size: contain;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .banner-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise {
+    padding: 24px;
+  }
+
+  .banner-intro-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise h2 {
+    font-size: 20px;
+  }
+
+  .banner-intro-expertise h3 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .container-expertise {
+    padding: 24px;
+  }
+  /* Réglez les styles pour les écrans de taille moyenne ici */
+}
+
+/* Le reste de votre code CSS reste inchangé */
+
+@media (max-width: 768px) {
+  .banner-expertise {
+    background-size: contain;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    }
+
+  .banner-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise {
+    padding: 0;
+  }
+
+  .banner-intro-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise h2 {
+    font-size: 20px;
+  }
+
+  .banner-intro-expertise h3 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .container-expertise {
+    padding: 0;
+  }
 }

@@ -6,6 +6,7 @@
     font-family: $headers-font;
     letter-spacing: 2.1px;
     text-underline-position: auto;
+    text-align: center;
   }
 
   h1 {
@@ -60,14 +61,16 @@
   }
 }
 
-.banner-conseil {
-  height: 1300px;
+.banner-conseil .banner-apropos {
   h1 {
     align-items: center;
     font-weight: bold;
     font-size: 28px;
     font-family: $headers-font;
     letter-spacing: 1px;
+    text-align: center;
+  }
+  h2 {
     text-align: center;
   }
   h3 {
@@ -78,12 +81,9 @@
     text-align: center;
     text-underline-position: auto;
   }
-  h2 {
-    text-align: center;
-  }
 }
 
-.banner-expertise {
+.banner-expertise-home {
   padding-left: 0;
   padding-right: 0;
   h1 {
@@ -107,25 +107,15 @@
   }
 }
 
-.banner-vision {
-  height: 850px;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-}
-
 .banner-gradient {
   background: linear-gradient($blue-pastel, $pink-pastel);
 }
 
-.banner-approche {
+.banner-methodologie {
   height: 1800px;
+  margin: 0;
 }
+
 
 .banner-contact {
   h1 {
