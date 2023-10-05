@@ -23,8 +23,8 @@
         <%= link_to emprunt_path, class: "card emprunt" do %>
           <h3>Emprunt</h3>
         <% end %>
-        <%= link_to fiscalite_path, class: "card fiscalite" do %>
-          <h3>Fiscalité</h3>
+        <%= link_to impots_path, class: "card impots" do %>
+          <h3>Impôts</h3>
         <% end %>
       </div>
     </div>
@@ -40,7 +40,7 @@
     ".entrepreneurs",
     ".emprunt",
     ".assistance",
-    ".fiscalite"
+    ".impots"
   ];
 
   const cards = cardOrder.map(selector => document.querySelector(selector));

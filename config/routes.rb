@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get '/emprunt', to: 'emprunt#index', as: 'emprunt'
   # Nom du fichier HTML : emprunt.html.erb
 
-  # Page Fiscalité
-  get '/fiscalite', to: 'fiscalite#index', as: 'fiscalite'
-  # Nom du fichier HTML : fiscalite.html.erb
+  # Page Impots
+  get '/impots', to: 'impots#index', as: 'impots'
+  # Nom du fichier HTML : impots.html.erb
 end
