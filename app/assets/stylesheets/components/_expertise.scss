@@ -5,7 +5,7 @@
   font-family: $body-font; /* Utilisez la police Roboto depuis Google Fonts */
 }
 
-.banner-placer {
+.banner-expertise {
   background-image: url(asset_path('checkerboard.png'));
   height: 233px;
   align-items: center;
@@ -24,11 +24,15 @@
   }
 }
 
-.banner .placer-text h3 {
+.banner .expertise-text h3 {
   clear: both;
 }
 
-.banner-intro-placer {
+.banner-intro-expertise {
+  padding-top: 48px;
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-bottom: 96px;
   h1 {
     align-items: center;
     font-weight: bold;
@@ -52,15 +56,22 @@
     font-family: $headers-font;
     letter-spacing: 1px;
     text-align: left;
+    padding-top: 20px;
   }
 }
 
-.container-placer-content {
+.container-expertise {
+  padding-left:96px;
+  padding-right:96px;
+}
+
+
+.container-expertise-content {
   display: flex;
   margin: 0;
 }
 
-.placer-text {
+.expertise-text {
   margin: 0;
   text-align: justify;
 }

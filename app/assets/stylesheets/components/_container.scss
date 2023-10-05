@@ -5,6 +5,7 @@
 .container {
   animation-direction: normal;
   animation-delay: 1s;
+  padding-left: 96px;
 }
 
 .container-conseils {
@@ -25,17 +26,17 @@
   margin: auto;
 }
 
-@media(max-width: 900px) {
-  .container-conseils {
-    width: 500px;
-  }
-}
+// @media(max-width: 900px) {
+//   .container-conseils {
+//     width: 500px;
+//   }
+// }
 
-@media(max-width: 500px) {
-  .container-conseils {
-    width: 300px;
-  }
-}
+// @media(max-width: 500px) {
+//   .container-conseils {
+//     width: 300px;
+//   }
+// }
 
 .conseil-icon {
   display: block;
@@ -103,11 +104,6 @@
   h3 {
     text-align: left;
   }
-}
-
-
-.container-expertise {
-  margin:0;
 }
 
 // h1, h2, h3 {

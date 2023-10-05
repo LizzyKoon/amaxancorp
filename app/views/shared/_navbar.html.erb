@@ -1,6 +1,8 @@
 <div class="navbar sticky-top">
   <div class="container-navbar">
-    <%= image_tag("logo-amaxan.png", alt: "logo-amaxan", id: "logo-amaxan") %>
+     <%= link_to root_path do %>
+      <%= image_tag("logo-amaxan.png", alt: "logo-amaxan", id: "logo-amaxan") %>
+    <% end %>
     <nav>
       <ul>
         <li><a href="#">A Propos</a></li>
@@ -15,7 +17,7 @@
             <li><%= link_to "Fiscalité", fiscalite_path %></li>
           </ul>
         </li>
-         <li><%= link_to "Methodologie", methodologie_path %></li>
+         <li><%= link_to "Methodologie", root_path(anchor: 'methodologie') %></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
