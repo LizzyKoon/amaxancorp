@@ -7,27 +7,53 @@
 
       <div class="cards-bilan">
         <div class="card-bilan">
-          <h2>BILAN PATRIMONIAL</h2>
-          <p>Pour étudier la structure de votre patrimoine, les flux de revenus et charges 
-          </p>
+          <div class="icon">
+            <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+          </div>
+          <div class="content">
+            <h2>BILAN PATRIMONIAL</h2>
+            <div class="content-text">
+              <p>Pour étudier la structure de votre patrimoine, les flux de revenus et charges</p>
+            </div>
+          </div>
         </div>
         <div class="card-bilan">
-          <h2>BILAN FISCAL</h2>
-          <p>Pour auditer et valider vos déclarations et l’utilisation de vos outils de défiscalisation :
-          dispositifs législatifs, crédits et réductions d’impôt, prélèvements forfaitaires libératoires. 
-          </p>
+          <div class="icon">
+            <i class="fa-solid fa-piggy-bank fa-2xl" style="color: #ffffff;"></i>
+          </div>
+          <div class="content">
+            <h2>BILAN FISCAL</h2>
+            <div class="content-text">
+              <p>Pour auditer et valider vos déclarations et l’utilisation de vos outils de défiscalisation :
+                dispositifs législatifs, crédits et réductions d’impôt, prélèvements forfaitaires libératoires.
+              </p>
+            </div>
+          </div>
         </div>
         <div class="card-bilan">
-          <h2>BILAN SOCIAL</h2>
-          <p>Pour évaluer et diagnostiquer votre niveau de protection et celui de votre famille 
-          </p>
+          <div class="icon">
+            <i class="fa-solid fa-people-roof fa-2xl" style="color: #fcfcfc;"></i>
+          </div>
+          <div class="content">
+            <h2>BILAN SOCIAL</h2>
+            <div class="content-text">
+              <p>Pour évaluer et diagnostiquer votre niveau de protection et celui de votre famille</p>
+            </div>
+         </div>
         </div>
         <div class="card-bilan">
-          <h2>BILAN RETRAITE</h2>
-          <p>Pour vous dire pourquoi et comment votre relevé de carrière peut vous éviter de futures erreurs et oublis.
-          </p>
+          <div class="icon">
+            <i class="fa-solid fa-person-cane fa-2xl" style="color: #ffffff;"></i>
+          </div>
+          <div class="content">
+            <h2>BILAN RETRAITE</h2>
+            <div class="content-text">
+              <p>Pour vous dire pourquoi et comment votre relevé de carrière peut vous éviter de futures erreurs et oublis.</p>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
     <div class="methodology-2">
       <h2><span class="large-number">2.</span> <sup class="small-text">VOUS CONSEILLER</sup></h2>
@@ -41,47 +67,65 @@
       de vos bilans et de nos préconisations accompagnée d’une synthèse de votre  enrichissement.
       </p>
       <p>
-      Préalablement à la fourniture de nos conseils, nous vous remettrons :
-      </p>
-      <p>
-      Un Document d’Identification et de Connaissance Client relatif à l’objet et la nature de notre relation
-      Un Document d’Entrée en Relation (DER) avec des mentions obligatoires
-      Une lettre de mission comportant les informations sur la nature et modalités de notre prestation, notre rémunération, la fourniture de nos conseils et des informations sur les frais et coûts des investissements conseillés
-      Un recueil d’Information pour collecter vos connaissances  et expériences financières, votre tolérance au risque, aux pertes, vos objectifs et votre horizon de placement
-      Un document de déclaration d’adéquation expliquant dans quelle mesure la recommandation est adaptée accompagnée des Documents d’Informations Clés des supports d’investissement.
-      </p>
+      <div class="wrapper">
+
+        <div class="faq-home-container">
+          <div class="faq">
+            <button class="accordion-home">
+              Préalablement à la fourniture de nos conseils, nous vous remettrons les documents ci-dessous
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <ul>
+                <li>Un Document d’Identification et de Connaissance Client relatif à l’objet et la nature de notre relation</li>
+                <li>Un Document d’Entrée en Relation (DER) avec des mentions obligatoires</li>
+                <li>Une lettre de mission comportant les informations sur la nature et modalités de notre prestation, notre rémunération, la fourniture de nos conseils et des informations sur les frais et coûts des investissements conseillés</li>
+                <li>Un recueil d’Information pour collecter vos connaissances et expériences financières, votre tolérance au risque, aux pertes, vos objectifs et votre horizon de placement</li>
+                <li>Un document de déclaration d’adéquation expliquant dans quelle mesure la recommandation est adaptée accompagnée des Documents d’Informations Clés des supports d’investissement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    </div>
 </div>
 
 <script>
-  console.log("Le code JavaScript s'exécute ici.");
+document.addEventListener("DOMContentLoaded", function () {
+  var buttons = document.querySelectorAll(".faq button");
 
-  // Sélectionnez les éléments que vous souhaitez afficher au défilement
-  const cardBilanElements = document.querySelectorAll('.card-bilan');
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var clickedButton = this;
 
-  // Options pour l'Intersection Observer
-  const cardBilanOptions = {
-    root: null, // Utilise la fenêtre par défaut comme zone d'affichage
-    rootMargin: '0px', // Aucune marge autour de la fenêtre d'affichage
-    threshold: 0.5, // Au moins 50% de l'élément doit être visible
-  };
+      // Ferme toutes les questions ouvertes sauf celle cliquée
+      buttons.forEach(function (btn) {
+        if (btn !== clickedButton) {
+          btn.classList.remove("opened");
+          btn.nextElementSibling.style.display = "none";
+        }
+      });
 
-  // Fonction callback à exécuter lorsque les cartes sont visibles
-  function handleCardBilanIntersection(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show-card');
-        // Vous pouvez également effectuer d'autres actions ici lorsque la carte est visible
+      // Ajoute ou supprime la classe "opened" au bouton cliqué
+      clickedButton.classList.toggle("opened");
+
+      // Affiche ou cache la réponse de la question cliquée
+      var panel = clickedButton.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
       }
     });
-  }
-  // Créer un nouvel objet Intersection Observer avec la fonction de rappel
-  const cardBilanObserver = new IntersectionObserver(handleCardBilanIntersection, cardBilanOptions);
-
-  // Ajouter chaque carte à l'observateur
-  cardBilanElements.forEach(card => {
-    cardBilanObserver.observe(card);
   });
+
+  // Fermez toutes les FAQ lors du chargement de la page
+  buttons.forEach(function (button) {
+    button.classList.remove("opened");
+    button.nextElementSibling.style.display = "none";
+  });
+});
+
 
 </script>
