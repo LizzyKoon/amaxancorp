@@ -28,10 +28,9 @@
 
 .card {
   background-color: white;
-  color: $blue;
   font-size: 10px;
   font-weight: 500;
-  height: 65px;
+  height: 65px !important;
   width: 640px;
   margin: 0;
   border-radius: 0 !important;
@@ -52,6 +51,7 @@
     padding-top: 10px;
     letter-spacing: 1px;
     text-decoration: none;
+    color: $blue;
   }
 }
 
@@ -71,65 +71,49 @@ h3 {
   transform: translate(0);
 }
 
-.cards-bilan {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0;
-}
 
-.card-bilan {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  background-color: rgba(255, 255, 255, 0.14);
-  border-radius: 5px;
-  margin: 0;
-  padding: 30px;
-  text-align: justify;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
+/* Adjust card size for smaller screens */
+@media (max-width: 768px) {
 
-.card-bilan .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Center vertically */
-  padding-top: 20px;
-}
-
-.card-bilan .content {
-  text-align: center;
-  margin: 20px;
-  padding-top: 40px;
-  text-align: justify;
-}
-
-.card-bilan .content-text {
-  padding: 0;
-  margin: 0;
-  padding-top: 20px;
-}
-
-.card-bilan {
-  h1 {
-    font-size: 28px;
-    margin: 0;
+  .banner-expertise-home p {
+    font-size: 16px;
   }
-  h2 {
-    font-size: 22px;
-    margin: 0;
-  }
-  h3 {
-    font-size: 20px;
-    margin: 0;
-  }
-}
 
-.card-bilan p {
-  font-size: 16px;
-  margin: 10px 0;
-}
+  .card {
+    height: 50px; /* Adjust height for smaller screens */
+    font-size: 8px; /* Adjust font size for smaller screens */
+    h3 {
+      font-size: 12px; /* Adjust font size for smaller screens */
+      padding-top: 5px;
+      margin: 0px; /* Adjust padding for smaller screens */
+    }
+  }
 
-.card-bilan.show-card {
-  opacity: 1;
-  transform: translateY(0);
+  .cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center align cards */
+    padding-bottom: 32px;
+  }
+
+  .cards-right .card {
+    transform: none; /* Faites apparaître les cartes de la droite par la droite */
+  }
+
+  .cards-left .cards-right {
+    padding-top: 0px;
+  }
+
+  .cards-right {
+    padding-top: 0px;
+  }
+
+  // .cards-right .card {
+  //   transform: translateX(20px); /* Faites apparaître les cartes de la droite par la droite */
+  // }
+
+  .cards-left h3,
+  .cards-right h3 {
+    text-align: center; /* Center the text on smaller screens */
+    padding: 0; /* Remove padding */
+  }
 }

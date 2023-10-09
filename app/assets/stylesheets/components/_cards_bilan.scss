@@ -1,0 +1,62 @@
+.cards-bilan {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+}
+
+.card-bilan {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  background-color: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  margin: 0;
+  padding: 30px;
+  text-align: justify;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-bilan .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  padding-top: 20px;
+}
+
+.card-bilan .content {
+  text-align: center;
+  margin: 20px;
+  padding-top: 40px;
+  text-align: justify;
+}
+
+.card-bilan .content-text {
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.card-bilan {
+  h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+
+.card-bilan p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.card-bilan.show-card {
+  opacity: 1;
+  transform: translateY(0);
+}

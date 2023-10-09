@@ -25,18 +25,6 @@
   margin: auto;
 }
 
-// @media(max-width: 900px) {
-//   .container-conseils {
-//     width: 500px;
-//   }
-// }
-
-// @media(max-width: 500px) {
-//   .container-conseils {
-//     width: 300px;
-//   }
-// }
-
 .conseil-icon {
   display: block;
   height: 90px;
@@ -147,4 +135,39 @@ body {
 .container-expertise {
   padding-left:96px;
   padding-right:96px;
+}
+
+/* Media Query for iPhone 12 */
+@media screen and (max-width: 1170px) {
+  .container {
+    padding-left: 20px; /* Adjust padding for iPhone 12 */
+  }
+
+  .conseil {
+    width: 100%; /* Full width for smaller screens */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container-conseils-top {
+    flex-direction: column; /* Stack conseils vertically on smaller screens */
+  }
+
+  .conseil-icon {
+    width: 50px; /* Adjust conseil icon size */
+    height: 50px;
+  }
+
+  .container-conseils {
+    padding-top: 20px; /* Adjust padding for conseils container */
+  }
+
+  .conseils-footer {
+    margin-top: 20px; /* Adjust margin for footer */
+  }
+
+  .container-apropos-content {
+    flex-direction: column; /* Stack apropos content vertically on smaller screens */
+    padding: 20px;
+  }
 }

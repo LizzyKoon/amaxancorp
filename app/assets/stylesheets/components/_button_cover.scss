@@ -67,3 +67,9 @@
   z-index: 1;
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .button-cover {
+    display: none; /* Hide the button on screens with a maximum width of 768px */
+  }
+}
