@@ -1,2 +1,2 @@
 //= link_tree ../images
- //= link app.scss
+//= link app.css

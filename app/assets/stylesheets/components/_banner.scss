@@ -6,7 +6,6 @@
     font-family: $headers-font;
     letter-spacing: 2.1px;
     text-underline-position: auto;
-    text-align: center;
   }
 
   h1 {
@@ -107,8 +106,16 @@
   }
 }
 
+#apropos {
+  margin:0;
+}
+
 .banner-gradient {
   background: linear-gradient($blue-pastel, $pink-pastel);
+}
+
+.banner-beige {
+  background-color: rgba(131, 109, 109, 0.11);
 }
 
 .banner-methodologie {
@@ -135,8 +142,35 @@
   color: $blue;
 }
 
-.banner-beige {
-  background-color: rgba(131, 109, 109, 0.11);
-  width: 100%;
-  margin: 0;
+/* Media Query pour iPhone 12 */
+@media screen and (max-width: 1170px) {
+
+  .banner {
+    padding-top: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .banner-home {
+    height: 400px;
+    h1 {
+    font-size: 26px; /* Ajustez la taille de la police pour l'iPhone 12 */
+  }
+}
+
+  .banner-conseil .banner-apropos .banner-methodologie {
+    padding: 32px;
+  }
+
+  .banner-content h1 {
+    font-size: 20px; /* Ajustez la taille de la police pour l'iPhone 12 */
+  }
+
+  .banner-expertise-home h1 {
+    font-size: 20px; /* Ajustez la taille de la police pour l'iPhone 12 */
+  }
+
+  .banner-home h1:nth-child(2) {
+    margin-top: 10px; /* Add spacing between the two lines of text */
+  }
 }
