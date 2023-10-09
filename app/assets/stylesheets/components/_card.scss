@@ -109,9 +109,19 @@ h3 {
   padding-top: 20px;
 }
 
-.card-bilan h2 {
-  font-size: 22px;
-  margin: 0;
+.card-bilan {
+  h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 0;
+  }
 }
 
 .card-bilan p {
