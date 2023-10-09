@@ -48,6 +48,7 @@
   h3 {
     font-size: 20px;
     margin: 0;
+    text-align: center;
   }
 }
 
@@ -59,4 +60,16 @@
 .card-bilan.show-card {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .cards-bilan {
+    display: flex;
+    flex-direction: column; /* Stack card-bilan elements vertically on small screens */
+  }
+
+  .card-bilan {
+    width: 100%; /* Full width for card-bilan on small screens */
+    margin-bottom: 20px; /* Add some spacing between card-bilan elements */
+  }
 }

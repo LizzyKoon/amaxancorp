@@ -119,7 +119,6 @@
 }
 
 .banner-methodologie {
-  height: 1800px;
   margin: 0;
 }
 
@@ -149,6 +148,10 @@
     padding-top: 64px;
     padding-left: 32px;
     padding-right: 32px;
+    padding-bottom: 64px;
+    h1 {
+      padding-bottom: 0px;
+    }
   }
 
   .banner-home {

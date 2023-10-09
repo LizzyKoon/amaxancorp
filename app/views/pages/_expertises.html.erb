@@ -33,74 +33,37 @@
   </div>
 </div>
 
-<script>
-let cardOrder = [
-  ".famille",
-  ".placement",
-  ".entrepreneurs",
-  ".emprunt",
-  ".assistance",
-  ".impots"
-];
+ <script>
+  const cardOrder = [
+    ".famille",
+    ".placement",
+    ".entrepreneurs",
+    ".emprunt",
+    ".assistance",
+    ".impots"
+  ];
 
-// Store references to card elements
-const cards = cardOrder.map(selector => document.querySelector(selector));
-const windowHeight = window.innerHeight;
+  const cards = cardOrder.map(selector => document.querySelector(selector));
+  const windowHeight = window.innerHeight;
 
-function handleScroll() {
-  const firstCard = cards[0];
-  const rect = firstCard.getBoundingClientRect();
-  const cardHeight = rect.height;
+  function handleScroll() {
+    const firstCard = cards[0];
+    const rect = firstCard.getBoundingClientRect();
+    const cardHeight = rect.height;
 
-  if (rect.top + cardHeight / 2 <= windowHeight / 2) {
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add('show-card');
-      }, index * 250); // Add a delay to display each card
-    });
+    if (rect.top + cardHeight / 2 <= windowHeight / 2) {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show-card');
+        }, index * 250); // Ajoute un délai pour afficher chaque carte
+      });
 
-    // Disable the scroll event listener after displaying the cards
-    window.removeEventListener('scroll', handleScroll);
-  }
-}
-
-window.addEventListener('scroll', handleScroll);
-
-// Store the original card order for reference
-const originalCardOrder = [...cardOrder];
-
-// Add a media query to change the card order for small screens
-const mediaQuery = window.matchMedia('(max-width: 768px)'); // Adjust the max-width as needed
-
-function updateCardOrder(mediaQuery) {
-  if (mediaQuery.matches) {
-    // Change the card order for small screens
-    cardOrder = [
-      ".famille",
-      ".entrepreneurs",
-      ".assistance",
-      ".placement",
-      ".emprunt",
-      ".impots"
-    ];
-  } else {
-    // Revert to the original card order for larger screens
-    cardOrder = originalCardOrder;
+      // Désactive l'écouteur d'événement après l'affichage des cartes
+      window.removeEventListener('scroll', handleScroll);
+    }
   }
 
-  // Update the `cards` array based on the new order
-  cards.forEach((_, index) => {
-    cards[index] = document.querySelector(cardOrder[index]);
-  });
-}
-
-// Initial call to set the card order based on screen size
-updateCardOrder(mediaQuery);
-
-// Listen for changes to the media query and update the card order accordingly
-mediaQuery.addListener(updateCardOrder);
-
-
+  window.addEventListener('scroll', handleScroll);
 </script>
 
 

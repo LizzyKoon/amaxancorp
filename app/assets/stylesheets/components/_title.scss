@@ -1,3 +1,9 @@
-/* Your existing CSS code */
+.title {
+  display: inline; /* Display the titles inline */
+}
 
-/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .title {
+    display: block; /* Display each title on a separate line for small screens */
+  }
+}

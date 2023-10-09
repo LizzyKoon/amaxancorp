@@ -171,3 +171,26 @@ body {
     padding: 20px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container-apropos-content {
+    flex-direction: column-reverse; /* Reverse the order for small screens */
+    padding: 0; /* Center content vertically */
+  }
+
+  .apropos-text {
+    text-align: center; /* Center text */
+    margin-bottom: 20px;
+    padding:0;
+    padding-top: 32px;
+    text-align: justify;/* Add some spacing between image and text */
+  }
+
+  /* Adjust image size for small screens */
+  #andre-henri-audibert {
+    width: 100%;
+    max-width: 300px; /* Adjust the max width as needed */
+    height: auto;
+    padding-top: 32px;
+  }
+}
