@@ -1,0 +1,124 @@
+@media screen and (min-width: 768px) {
+
+  .container-conseils {
+    display: block;
+    margin: 0;
+    padding-top: 96px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .container-conseils-top {
+    display: flex; /* Utilisez Flexbox pour aligner les éléments enfants */
+    justify-content: space-between; /* Alignez les éléments en les espaçant équitablement */
+    align-items: flex-start;
+    width: auto;
+    margin: auto;
+  }
+
+  .conseil-icon {
+    display: block;
+    height: 90px;
+    width: 90px;
+    margin: auto;
+  }
+
+  .conseil {
+    flex: 1; /* Faites en sorte que chaque bloc de texte prenne une part égale de l'espace disponible */
+    border: 1px solid #ccc; /* Ajoutez une bordure pour la délimitation */
+    width: 450px;
+    text-align: justify;
+    border: none;
+    margin: 0;
+    padding-left: 90px;
+    padding-right : 90px;
+  }
+
+  .conseil-text{
+    margin: 0;
+    padding-top: 20px;
+    h2 {
+      padding-bottom: 10px;
+    }
+  }
+
+  .conseil-text-title{
+    margin: 0;
+    text-align: center;
+    width: auto;
+    height: 50px;
+    margin-bottom: 40px;
+    vertical-align: middle;
+
+  }
+
+  .container-conseils-top {
+    display: flex;
+  }
+
+  .conseils-footer {
+    margin-top: 96px;
+    h3 {
+      padding-bottom: 18px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 0;
+      padding-bottom: 8px;
+    }
+  }
+
+  .conseils-footer-card {
+    display: flex;
+    margin: 0;
+  }
+
+  .conseils-footer-card-icon {
+    width: 50px;
+  }
+
+  .conseils-footer-card-text {
+    padding-bottom: 40px;
+    h3 {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .conseil {
+    width: 100%;
+    padding: 0px;
+    text-align: justify;
+  }
+
+  .container-conseils-top {
+    flex-direction: column; /* Stack conseils vertically on smaller screens */
+  }
+
+  .conseil-icon {
+    width: 50px; /* Adjust conseil icon size */
+    height: 50px;
+  }
+
+  .container-conseils {
+    padding-top: 20px; /* Adjust padding for conseils container */
+  }
+
+  .conseils-footer {
+    margin-top: 20px; /* Adjust margin for footer */
+  }
+
+
+  .conseils-footer-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .conseils-footer-card-icon {
+    display: none; /* Adjust the spacing between the icon and text */
+  }
+}

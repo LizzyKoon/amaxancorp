@@ -7,3 +7,10 @@
     display: block; /* Display each title on a separate line for small screens */
   }
 }
+
+@media (max-width: 768px) {
+  .complementarite,
+  .remuneration {
+    display: none;
+  }
+}

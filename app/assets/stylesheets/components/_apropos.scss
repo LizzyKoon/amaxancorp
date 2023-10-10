@@ -1,0 +1,71 @@
+@media screen and (min-width: 1025px) {
+  /* Styles for large screens go here */
+    .container-apropos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align text and image at the top */
+    }
+
+    .apropos-text-large-screen {
+      flex: 1; /* Let the text take available space */
+    }
+
+    .apropos-text-small-screen {
+      display: none;
+    }
+
+    .image-container-small-screen {
+      display: none; /* Hide the image on smaller screens */
+    }
+  }
+
+@media screen and (min-width: 768px) {
+  .container-apropos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align text and image at the top */
+    }
+
+    .apropos-text-large-screen {
+      flex: 1; /* Let the text take available space */
+    }
+
+    .apropos-text-small-screen {
+      display: none;
+    }
+
+    .image-container-small-screen {
+      display: none; /* Hide the image on smaller screens */
+    }
+}
+
+/* Media Query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  .container-apropos-content {
+    flex-direction: column; /* Stack the image above the text for smaller screens */
+  }
+
+  .apropos-text-small-screen {
+    text-align: center; /* Center text */
+    padding-top: 36px;
+    padding-right: 0px;
+    padding-left: 0px; /* Add margin to the text */
+    text-align: justify;/* Add some spacing between image and text */
+  }
+
+  .apropos-text-large-screen {
+    display: none;
+  }
+
+  .image-container-large-screen {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  /* Adjust image size for small screens */
+  .image-container-small-screen img {
+    width: 100%; /* Make the image fill the container horizontally */
+    height: auto; /* Preserve the aspect ratio */
+    max-width: none; /* Remove max-width constraint */
+  }
+
+}

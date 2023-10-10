@@ -1,153 +1,303 @@
-.banner {
-  padding: 96px;
+@media screen and (min-width: 1025px) {
+  .banner {
+    padding: 96px;
 
-  h1, h2, h3 {
-    font-weight: bold;
-    font-family: $headers-font;
-    letter-spacing: 2.1px;
-    text-underline-position: auto;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2, h3 {
-    font-size: 20px;
-  }
-}
-
-.banner-home {
-  background-image: url(asset_path('checkerboard.png'));
-  height: 700px;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 38px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: left;
-  }
-  h2 span{
-    font-size: 24px;
-  }
-}
-
-.banner-content {
-  min-height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-}
-
-.banner-conseil .banner-apropos {
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
-  }
-  h3 {
-    font-weight: bold;
-    font-size: 18px;
-    font-family: $headers-font;
-    letter-spacing: 2.1px;
-    text-align: center;
-    text-underline-position: auto;
-  }
-}
-
-.banner-expertise-home {
-  padding-left: 0;
-  padding-right: 0;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 28px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
+    h1, h2, h3 {
+      font-weight: bold;
+      font-family: $headers-font;
+      letter-spacing: 2.1px;
+      text-underline-position: auto;
     }
-  p {
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2, h3 {
+      font-size: 20px;
+    }
+  }
+
+  .banner-home {
+    background-image: url(asset_path('checkerboard.png'));
+    height: 700px;
     align-items: center;
-    font-size: 18px;
-    font-family: $headers-font;
-    text-align: center;
-    text-underline-position: auto;
-    padding-top: 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 38px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    h2 span{
+      font-size: 24px;
+    }
+  }
+
+  .banner-content {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+
+  .banner-conseil .banner-apropos {
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      font-family: $headers-font;
+      letter-spacing: 2.1px;
+      text-align: center;
+      text-underline-position: auto;
+    }
+  }
+
+  .banner-expertise-home {
+    padding-left: 0;
+    padding-right: 0;
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      }
+    p {
+      align-items: center;
+      font-size: 18px;
+      font-family: $headers-font;
+      text-align: center;
+      text-underline-position: auto;
+      padding-top: 10px;
+    }
+  }
+
+  #apropos {
+    margin:0;
+  }
+
+  .banner-gradient {
+    background: linear-gradient($blue-pastel, $pink-pastel);
+  }
+
+  .banner-beige {
+    background-color: rgba(131, 109, 109, 0.11);
+  }
+
+  .banner-methodologie {
+    margin: 0;
+  }
+
+  .banner-contact {
+    h1 {
+    align-items: left;
+    text-align: left;
+    }
+  }
+
+  .CTA {
+    height: 400px;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .blue {
+    color: $blue;
   }
 }
 
-#apropos {
-  margin:0;
-}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for medium screens go here */
+  .banner {
+    padding: 96px;
 
-.banner-gradient {
-  background: linear-gradient($blue-pastel, $pink-pastel);
-}
+    h1, h2, h3 {
+      font-weight: bold;
+      font-family: $headers-font;
+      letter-spacing: 2.1px;
+      text-underline-position: auto;
+    }
 
-.banner-beige {
-  background-color: rgba(131, 109, 109, 0.11);
-}
+    h1 {
+      font-size: 28px;
+    }
 
-.banner-methodologie {
-  margin: 0;
-}
-
-.banner-contact {
-  h1 {
-  align-items: left;
-  text-align: left;
+    h2, h3 {
+      font-size: 20px;
+    }
   }
+
+  .banner-home {
+    background-image: url(asset_path('checkerboard.png'));
+    height: 700px;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 38px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    h2 span{
+      font-size: 24px;
+    }
+  }
+
+  .banner-content {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+
+  .banner-conseil .banner-apropos {
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      font-family: $headers-font;
+      letter-spacing: 2.1px;
+      text-align: center;
+      text-underline-position: auto;
+    }
+  }
+
+  .banner-expertise-home {
+    padding-left: 0;
+    padding-right: 0;
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      }
+    p {
+      align-items: center;
+      font-size: 18px;
+      font-family: $headers-font;
+      text-align: center;
+      text-underline-position: auto;
+      padding-top: 10px;
+    }
+  }
+
+  #apropos {
+    margin:0;
+  }
+
+  .banner-gradient {
+    background: linear-gradient($blue-pastel, $pink-pastel);
+  }
+
+  .banner-beige {
+    background-color: rgba(131, 109, 109, 0.11);
+  }
+
+  .banner-methodologie {
+    margin: 0;
+  }
+
+  .banner-contact {
+    h1 {
+    align-items: left;
+    text-align: left;
+    }
+  }
+
+  .CTA {
+    height: 400px;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .blue {
+    color: $blue;
+  }
+
 }
 
-.CTA {
-  height: 400px;
-}
-
-.white {
-  color: white;
-}
-
-.blue {
-  color: $blue;
-}
 
 /* Media Query pour iPhone 12 */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 768px) {
 
   .banner {
     padding-top: 64px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 36px;
+    padding-right: 36px;
     padding-bottom: 64px;
     h1 {
       padding-bottom: 0px;
@@ -158,11 +308,14 @@
     height: 400px;
     h1 {
     font-size: 26px; /* Ajustez la taille de la police pour l'iPhone 12 */
+    }
+    h2 span{
+      font-size: 24px;
+    }
   }
-}
 
-  .banner-conseil .banner-apropos .banner-methodologie {
-    padding: 32px;
+  .banner-conseil .banner-apropos .banner-methodologie .banner-contact {
+    padding: 36px;
   }
 
   .banner-content h1 {
@@ -170,7 +323,9 @@
   }
 
   .banner-expertise-home h1 {
-    font-size: 20px; /* Ajustez la taille de la police pour l'iPhone 12 */
+    font-size: 26px;
+    text-align: left;
+     /* Ajustez la taille de la police pour l'iPhone 12 */
   }
 
   .banner-home h1:nth-child(2) {
