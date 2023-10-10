@@ -146,7 +146,7 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /* Styles for medium screens go here */
   .banner {
-    padding: 96px;
+    padding: 64px;
 
     h1, h2, h3 {
       font-weight: bold;
@@ -289,7 +289,6 @@
   }
 
 }
-
 
 /* Media Query pour iPhone 12 */
 @media screen and (max-width: 768px) {

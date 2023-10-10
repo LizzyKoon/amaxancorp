@@ -23,7 +23,8 @@
   .container-apropos-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align text and image at the top */
+    align-items: flex-start;
+    margin:0; /* Align text and image at the top */
     }
 
     .apropos-text-large-screen {
