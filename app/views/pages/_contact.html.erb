@@ -1,9 +1,5 @@
 
   <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
         .contact-container {
             display: flex;
             justify-content: space-between;
@@ -131,7 +127,8 @@
 
         .contact-container {
                 display: block; /* Display as blocks for small screens */
-                margin: 36px;
+                margin-left: 36px;
+                margin-right: 36px;
             }
 
         .contact-info {
@@ -148,6 +145,13 @@
 
         .button-form {
           margin: 10px;
+        }
+
+        #expertise::placeholder {
+          font-family: 'Libre Franklin', sans-serif; /* Remplacez 'Nouvelle Police' par la police de votre choix */
+          font-size: 14px; /* Taille de police de votre choix */
+          color: #999; /* Couleur de police de votre choix */
+          /* Autres styles de texte pour le placeholder */
         }
         }
     </style>
@@ -221,7 +225,7 @@
     // Initialize Select2 on the select element
 $(document).ready(function() {
     $('#expertise').select2({
-        placeholder: 'Sélectionnez une ou plusieurs expertises', // Placeholder text
+        placeholder: 'Veuillez sélectionner en cliquant', // Placeholder text
         allowClear: true, // Option to clear selection
         closeOnSelect: false, // Keep the dropdown open after selection
     });

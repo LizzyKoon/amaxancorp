@@ -133,7 +133,7 @@
     background-size: contain;
     padding: 10px;
     text-align: center;
-    height: auto;
+    height: 120px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -163,6 +163,6 @@
   }
 
   .container-expertise {
-    padding: 0;
+    margin: 32px;
   }
 }

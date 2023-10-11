@@ -5,6 +5,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 !important;
+  margin-left: 96px;
+  margin-right: 96px;
 }
 
 .navbar ul li a:hover {
@@ -22,6 +24,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.desktop-menu {
+  margin: 0;
 }
 
 .dropdown-menu {
@@ -70,8 +76,7 @@ ul li ul {
   min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
+  margin: 0;
   display: none;
 }
 
