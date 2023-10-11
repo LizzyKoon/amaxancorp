@@ -9,11 +9,40 @@
   margin-right: 96px;
 }
 
-.navbar ul li a:hover {
-  text-decoration: none; /* Remove underline */
-  background-color: $blue;
-  color: white; /* Change text color on hover to your desired color */
+/* Style the "Expertises" menu item when hovered */
+.navbar ul li.dropdown:hover > a {
+  background-color: $blue; /* Set the background color to the hover color */
+  color: white;
+  padding: 8px 16px; /* Set the text color to the hover color */
 }
+
+/* Style the dropdown container */
+.navbar ul li.dropdown ul.dropdown-menu {
+  width: 300px; /* Set the desired width for the dropdown menu */
+  padding: 10px; /* Add padding to the dropdown menu for spacing */
+}
+
+/* Style the dropdown items when hovered */
+.navbar ul li.dropdown ul.dropdown-menu li a:hover {
+  background-color: $blue-pastel;
+  color: white;
+  padding: 8px 16px;
+  display: block;
+  transition: background-color 0.2s, padding 0.2s, line-height 0.9;
+  line-height: 0.9;
+  align-items: center;
+}
+
+/* Style the "A Propos" and "Contact" items when hovered */
+.navbar ul li a:hover {
+  text-decoration: none;
+  background-color: $blue;
+  color: white;
+  padding: 8px 16px;
+  transition: background-color 0.2s, padding 0.2s, line-height 0.9;
+  line-height: 0.9;
+}
+
 
 /* Style the container within the navbar */
 .container-navbar {
@@ -33,7 +62,8 @@
 .dropdown-menu {
   border: 2px solid $blue; /* Replace "YourBorderColor" with your desired border color */
   border-radius: 5px; /* Optional: Add rounded corners to the border */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px /* Optional: Add a box shadow for a subtle effect */
 }
 /* Style the navigation menu */
 
