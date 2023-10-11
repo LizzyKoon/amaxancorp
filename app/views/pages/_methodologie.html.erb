@@ -125,5 +125,27 @@ document.addEventListener("DOMContentLoaded", function () {
     button.classList.remove("opened");
     button.nextElementSibling.style.display = "none";
   });
+
+  const cards = Array.from(document.querySelectorAll('.card-bilan')); // Select all card elements
+  const windowHeight = window.innerHeight;
+
+  function handleScroll() {
+    const firstCard = cards[0];
+    const rect = firstCard.getBoundingClientRect();
+    const cardHeight = rect.height;
+
+    if (rect.top + cardHeight / 2 <= windowHeight / 2) {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show-card'); // Add animation class
+        }, index * 250); // Add a delay for each card
+      });
+
+      // Disable the scroll event listener after displaying the cards
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
 });
 </script>

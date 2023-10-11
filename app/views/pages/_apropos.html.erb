@@ -1,7 +1,7 @@
 <!-- Default HTML for larger screens -->
 <div class="banner banner-beige banner-apropos blue">
   <div class="container">
-      <h1>Notre Vision.</h1>
+      <h1 class="vision-title">Notre Vision.</h1>
       <div class="container-apropos-content">
           <div class="apropos-text-large-screen">
             <strong>AMAXAN</strong> est dirigé par André AUDIBERT, Conseil en gestion de patrimoine et Conseil en Investissements Financiers,
@@ -38,3 +38,35 @@
 <div class="image-container-small-screen">
   <%= image_tag("andre-henri-audibert.png", alt: "andre-henri-audibert", id: "andre-henri-audibert") %>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var visionTitle = document.querySelector(".vision-title");
+  var windowHeight = window.innerHeight;
+
+  function handleScroll() {
+    var rect = visionTitle.getBoundingClientRect();
+    var titleHeight = visionTitle.offsetHeight;
+
+    if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+      // Le titre est à mi-chemin de la fenêtre.
+      visionTitle.style.transform = 'translateX(0)';
+      visionTitle.style.opacity = 1;
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  // Styles initiaux pour le titre (caché au départ).
+  visionTitle.style.transform = 'translateX(-100%)';
+  visionTitle.style.opacity = 0;
+
+  // Ajoute un écouteur d'événement de défilement pour appeler la fonction "handleScroll" à chaque défilement.
+  window.addEventListener('scroll', handleScroll);
+
+  // Déclencher immédiatement si le titre est déjà visible (par exemple, si la page est rechargée en position de défilement au milieu du titre).
+  if (window.scrollY + windowHeight / 2 >= visionTitle.getBoundingClientRect().top) {
+    handleScroll();
+  }
+});
+
+</script>

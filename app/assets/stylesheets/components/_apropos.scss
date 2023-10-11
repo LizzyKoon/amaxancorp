@@ -38,6 +38,17 @@
     display: none;
   }
 
+  .vision-title {
+    transition: transform 2s ease, opacity 2s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .fade-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

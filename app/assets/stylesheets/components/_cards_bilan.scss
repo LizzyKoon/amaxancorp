@@ -15,7 +15,9 @@
   margin: 0;
   padding: 36px;
   text-align: justify;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0; /* Hide the cards initially */
+  transform: translateY(20px); /* Move the cards down initially */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .card-bilan .icon {
@@ -73,6 +75,10 @@
     max-width: 100%; /* Set a maximum width to keep the grid within the container */
     margin: 0;
   }
+  .card-bilan.show-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* For screens up to 768px */
@@ -95,6 +101,10 @@
 
   .card-bilan h1 {
     font-size: 24px; /* Adjust font size for smaller screens */
+  }
+  .card-bilan.show-card {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* Adjust other styles as needed for small screens */
