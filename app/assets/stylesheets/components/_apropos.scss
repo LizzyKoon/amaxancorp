@@ -1,72 +1,104 @@
-@media screen and (min-width: 1025px) {
-  /* Styles for large screens go here */
-    .container-apropos-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align text and image at the top */
-    }
+/* Styles for large screens */
 
-    .apropos-text-large-screen {
-      flex: 1; /* Let the text take available space */
-    }
+@media screen and (min-width: 1024px) {
 
-    .apropos-text-small-screen {
-      display: none;
-    }
-
-    .image-container-small-screen {
-      display: none; /* Hide the image on smaller screens */
-    }
-  }
-
-@media screen and (min-width: 768px) {
   .container-apropos-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin:0; /* Align text and image at the top */
-    }
-
-    .apropos-text-large-screen {
-      flex: 1; /* Let the text take available space */
-    }
-
-    .apropos-text-small-screen {
-      display: none;
-    }
-
-    .image-container-small-screen {
-      display: none; /* Hide the image on smaller screens */
-    }
-}
-
-/* Media Query for smaller screens (e.g., mobile devices) */
-@media screen and (max-width: 768px) {
-  .container-apropos-content {
-    flex-direction: column; /* Stack the image above the text for smaller screens */
-  }
-
-  .apropos-text-small-screen {
-    text-align: center; /* Center text */
-    padding-top: 36px;
-    padding-right: 0px;
-    padding-left: 0px; /* Add margin to the text */
-    text-align: justify;/* Add some spacing between image and text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+  margin-left: 0;
+  margin-right: 0;
   }
 
   .apropos-text-large-screen {
-    display: none;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+    text-align: justify;
+    padding-right: 60px; /* Ajoute un espace entre le texte et l'image */
   }
 
   .image-container-large-screen {
-    display: none; /* Hide the image on smaller screens */
+    display: flex;
+    max-width: 360px; /* Set a maximum width for the image */
+    margin: 0;
+    padding: 0;
+    /* Preserve the image's aspect ratio */
+    img { /* Allow the image to resize based on the container */
+      height: auto;
+      max-width: 100%; /* Ensure the image doesn't exceed its container */
+    }
   }
 
-  /* Adjust image size for small screens */
+  .apropos-text-small-screen {
+    display: none;
+  }
+  .image-container-small-screen {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container-apropos-content {
+    flex-direction: column;
+    margin:0; /* Align items at the top for smaller screens */
+  }
+
+  .apropos-text-large-screen {
+    align-items: center;
+    padding-top: 36px;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: justify;
+    margin: 0;
+  }
+
+  .image-container-large-screen {
+    display: flex;
+    max-width: 100%; /* Set a maximum width for the image */
+    margin: 0;
+    padding-top: 36px;
+    /* Preserve the image's aspect ratio */
+    img {
+      width: auto; /* Allow the image to resize based on the container */
+      height: 100%;
+      max-width: 100%; /* Ensure the image doesn't exceed its container */
+    }
+  }
+
+  .apropos-text-small-screen,
+  .image-container-small-screen {
+    display: none;
+  }
+}
+
+
+/* Styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .container-apropos-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;/* Align items at the top for smaller screens */
+  }
+
+  .apropos-text-small-screen {
+    padding-top: 36px;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: justify;
+  }
+
+  .apropos-text-large-screen,
+  .image-container-large-screen {
+    display: none;
+  }
+
   .image-container-small-screen img {
-    width: 100%; /* Make the image fill the container horizontally */
-    height: auto; /* Preserve the aspect ratio */
-    max-width: none; /* Remove max-width constraint */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
-
 }

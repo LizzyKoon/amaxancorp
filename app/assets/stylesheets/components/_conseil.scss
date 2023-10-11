@@ -27,12 +27,11 @@
   .conseil {
     flex: 1; /* Faites en sorte que chaque bloc de texte prenne une part égale de l'espace disponible */
     border: 1px solid #ccc; /* Ajoutez une bordure pour la délimitation */
-    width: 450px;
+    width: 50%;
     text-align: justify;
     border: none;
     margin: 0;
-    padding-left: 90px;
-    padding-right : 90px;
+    padding: 5%;
   }
 
   .conseil-text{
@@ -58,7 +57,7 @@
   }
 
   .conseils-footer {
-    margin-top: 96px;
+    margin: 0;
     h3 {
       padding-bottom: 18px;
       font-weight: bold;
@@ -70,18 +69,21 @@
 
   .conseils-footer-card {
     display: flex;
+    align-items: center;
     margin: 0;
   }
 
   .conseils-footer-card-icon {
-    width: 50px;
+    flex: 30%;
+    margin:0;
+    padding: 5%;
+    text-align: center;/* Adjust the margin as needed */
   }
 
   .conseils-footer-card-text {
-    padding-bottom: 40px;
-    h3 {
-      text-align: left;
-    }
+    flex: 70%;
+    padding: 5%;
+    margin: 0;
   }
 }
 
@@ -113,12 +115,11 @@
   .conseil {
     flex: 1; /* Faites en sorte que chaque bloc de texte prenne une part égale de l'espace disponible */
     border: 1px solid #ccc; /* Ajoutez une bordure pour la délimitation */
-    width: 450px;
+    width: 50%;
     text-align: justify;
     border: none;
     margin: 0;
-    padding-left: 40px;
-    padding-right : 40px;
+    padding: 5%;
   }
 
   .conseil-text{
@@ -144,7 +145,8 @@
   }
 
   .conseils-footer {
-    margin-top: 96px;
+    margin: 0;
+    display: block;
     h3 {
       padding-bottom: 18px;
       font-weight: bold;
@@ -156,18 +158,21 @@
 
   .conseils-footer-card {
     display: flex;
+    align-items: center;
     margin: 0;
   }
 
   .conseils-footer-card-icon {
-    width: 50px;
+    flex: 30%;
+    margin:0;
+    padding: 5%;
+    text-align: center;/* Adjust the margin as needed */
   }
 
   .conseils-footer-card-text {
-    padding-bottom: 40px;
-    h3 {
-      text-align: left;
-    }
+    flex: 70%;
+    padding: 5%;
+    margin: 0;
   }
 }
 

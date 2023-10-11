@@ -1,8 +1,4 @@
-.title {
-  display: inline; /* Display the titles inline */
-}
-
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .title {
     display: block; /* Display each title on a separate line for small screens */
   }
@@ -12,5 +8,9 @@
   .complementarite,
   .remuneration {
     display: none;
+  }
+
+  .title {
+    display: inline; /* Display the titles inline */
   }
 }

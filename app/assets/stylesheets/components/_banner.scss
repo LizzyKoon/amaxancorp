@@ -1,5 +1,4 @@
-@media screen and (min-width: 1025px) {
-  .banner {
+.banner {
     padding: 96px;
 
     h1, h2, h3 {
@@ -61,7 +60,29 @@
     }
   }
 
-  .banner-conseil .banner-apropos {
+  .banner-conseil {
+    h1 {
+      align-items: center;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      font-family: $headers-font;
+      letter-spacing: 2.1px;
+      text-align: center;
+      text-underline-position: auto;
+    }
+  }
+
+  .banner-apropos {
     h1 {
       align-items: center;
       font-weight: bold;
@@ -93,6 +114,7 @@
       font-family: $headers-font;
       letter-spacing: 1px;
       text-align: center;
+      white-space: nowrap;
     }
     h2 {
       text-align: center;
@@ -141,12 +163,12 @@
   .blue {
     color: $blue;
   }
-}
+
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /* Styles for medium screens go here */
   .banner {
-    padding: 64px;
+    padding: 96px;
 
     h1, h2, h3 {
       font-weight: bold;
@@ -313,19 +335,23 @@
     }
   }
 
-  .banner-conseil .banner-apropos .banner-methodologie .banner-contact {
-    padding: 36px;
-  }
+  // .banner-conseil .banner-apropos .banner-methodologie .banner-contact {
+  //   padding: 36px;
+  // }
 
   .banner-content h1 {
     font-size: 20px; /* Ajustez la taille de la police pour l'iPhone 12 */
   }
-
-  .banner-expertise-home h1 {
+  .expertise-header {
+    text-align: left;
+    padding-left: 36px;
+  }
+  .banner-expertise-home
+    h1  {
     font-size: 26px;
     text-align: left;
      /* Ajustez la taille de la police pour l'iPhone 12 */
-  }
+    }
 
   .banner-home h1:nth-child(2) {
     margin-top: 10px; /* Add spacing between the two lines of text */

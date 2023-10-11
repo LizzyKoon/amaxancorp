@@ -7,7 +7,7 @@
   .container {
     animation-direction: normal;
     animation-delay: 1s;
-    padding-left: 96px;
+    // padding-left: 96px;
   }
 
   .container-expertise-home {
@@ -23,7 +23,23 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Styles for medium screens go here */
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
+    padding-left: 96px;
+  }
+
+  .container-expertise-home {
+    padding-left:0;
+    padding-right:0;
+    margin:0;
+  }
+
   .container {
     padding-left: 20px; /* Adjust padding for iPhone 12 */
   }
