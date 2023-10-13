@@ -9,7 +9,8 @@ class ContactController < ApplicationController
     expertises = params[:expertise]
     message = params[:message]
 
-    # Traitez les données ici (par exemple, envoyez un e-mail, enregistrez-les dans une base de données, etc.)
+    # Envoi du message par e-mail
+    ContactMailer.contact_email(nom, email, telephone, expertises, message).deliver_now
 
     # Redirigez l'utilisateur vers une page de confirmation
     redirect_to contact_confirmation_path
