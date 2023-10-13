@@ -107,11 +107,16 @@
   #message {
       width: 100%;
       height: 200px;
+      color: $blue;
   }
 
   #message::placeholder {
       color: #999;
       font-weight: 100;
+  }
+
+  #confirmation-message {
+    color: $blue;
   }
 
   .contact-form-grid-2 {
@@ -165,7 +170,7 @@
   margin: 10px;
 }
 
-#expertise::placeholder {
+select#expertise::placeholder {
   font-family: 'Libre Franklin', sans-serif; /* Remplacez 'Nouvelle Police' par la police de votre choix */
   font-size: 14px; /* Taille de police de votre choix */
   color: #999; /* Couleur de police de votre choix */

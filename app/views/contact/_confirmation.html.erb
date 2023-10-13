@@ -1,0 +1,13 @@
+<div id="confirmation-message">
+  <h2>Confirmation</h2>
+  <p>Merci, votre message a été envoyé avec succès ! Nous vous répondrons très prochainement.</p>
+</div>
+
+<script>
+  // Redirigez l'utilisateur vers la page d'accueil après 3 secondes
+  $(document).ready(function() {
+    setTimeout(function() {
+      window.location.href = "<%= root_path %>"; // Remplacez avec le chemin de votre page d'accueil si nécessaire
+    }, 3000); // 3000 millisecondes (3 secondes)
+  });
+</script>

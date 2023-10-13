@@ -22,7 +22,7 @@
           </div>
       </div>
       <div class="contact-form">
-          <form action="#" method="post">
+          <form action="/contact" method="post">
             <div class="contact-form-grid-2">
               <div class="form-group">
                   <label for="nom">Nom</label>
@@ -52,6 +52,7 @@
                   <textarea id="message" name="message" class="wide-input" placeholder="Message" required style="font-weight: lighter;"></textarea>
               </div>
               <div class="button-form-block">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                 <input type="submit" value="ENVOYER" data-wait="Please wait" class="button-form">
               </div>
             </div> <!-- Bouton sous le champ de message -->
@@ -73,7 +74,7 @@
 $(document).ready(function() {
   // Initialiser Select2 sur l'élément select
   $('#expertise').select2({
-    placeholder: 'Cliquez pour sélectionner', // Texte de remplacement
+    placeholder: 'Sélectionner', // Texte de remplacement
     allowClear: true, // Option de suppression de la sélection
     closeOnSelect: false, // Conserver la boîte déroulante ouverte après la sélection
   });
