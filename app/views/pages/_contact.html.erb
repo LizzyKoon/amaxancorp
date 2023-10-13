@@ -1,236 +1,103 @@
-
-  <style>
-        .contact-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-right: 30px;
-        }
-
-        .contact-info {
-            margin-left: 0;
-            width: 33%;
-            h1 {
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-        }
-
-        .contact-form {
-            flex: 1;
-            margin: 0;
-            background-color: white;
-            border-radius: 5px;
-            padding-top: 30px;
-            padding-left: 5px;
-            padding-right: 5px;
-            width: 66%;
-        }
-
-        .contact-form h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%; /* Update to take full width on small and medium screens */
-            margin-right: 0;
-        }
-
-        .contact-details {
-            margin: 0;
-        }
-
-        .contact-phone,
-        .contact-email {
-            display: flex;
-            align-items: center;
-            margin: 0;
-        }
-
-        .contact-phone i,
-        .contact-email i {
-            color: #070b81;
-            margin-right: 10px;
-        }
-
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .form-group {
-            flex: 1;
-            margin: 10px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #f1efef;
-            border-radius: 5px;
-            margin: 0;
-            color: #999;
-        }
-
-        .form-group.wide-input {
-            width: 100%;
-        }
-
-        #message {
-            width: 100%;
-            height: 200px;
-        }
-
-        #message::placeholder {
-            color: #999;
-            font-weight: 100;
-        }
-
-        .contact-form-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .button-form {
-            width: 100%;
-            padding: 10px;
-            background-color: #070B81;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .button-form-block {
-            justify-content: flex-start;
-            align-items: center;
-            display: flex;
-        }
-
-        @media (max-width: 768px) {
-
-        .contact-container {
-                display: block; /* Display as blocks for small screens */
-                margin-left: 36px;
-                margin-right: 36px;
-            }
-
-        .contact-info {
-            width: auto;
-        }
-
-        .contact-form {
-            width: auto;
-        }
-
-        .contact-form-grid-2 {
-            display: block; /* Display as blocks for small screens */
-        }
-
-        .button-form {
-          margin: 10px;
-        }
-
-        #expertise::placeholder {
-          font-family: 'Libre Franklin', sans-serif; /* Remplacez 'Nouvelle Police' par la police de votre choix */
-          font-size: 14px; /* Taille de police de votre choix */
-          color: #999; /* Couleur de police de votre choix */
-          /* Autres styles de texte pour le placeholder */
-        }
-        }
-    </style>
-</head>
-<body>
-    <div class="banner banner-beige banner-contact blue">
-      <div class="contact-container">
-         <div class="contact-info">
-              <h1>Contact</h1>
-              <div class="contact-details" style="margin:0;">
-                  <div class="contact-phone">
-                      <p>
-                          <span style="display: inline-block; margin-right: 10px;">
-                              <i class="fa-solid fa-phone" style="color: #070b81;"></i>
-                          </span>
-                          +33 6 43 83 18 04
-                      </p>
-                  </div>
-                  <div class="contact-email">
-                      <p>
-                          <span style="display: inline-block; margin-right: 10px;">
-                              <i class="fa-solid fa-envelope" style="color: #070b81;"></i>
-                          </span>
-                          amaxan@gmail.com
-                      </p>
-                  </div>
+<div class="banner banner-beige banner-contact blue">
+  <div class="contact-container">
+      <div class="contact-info">
+          <h1>Contact</h1>
+          <div class="contact-details" style="margin:0;">
+              <div class="contact-phone">
+                  <p>
+                      <span style="display: inline-block; margin-right: 10px;">
+                          <i class="fa-solid fa-phone" style="color: #070b81;"></i>
+                      </span>
+                      +33 6 43 83 18 04
+                  </p>
+              </div>
+              <div class="contact-email">
+                  <p>
+                      <span style="display: inline-block; margin-right: 10px;">
+                          <i class="fa-solid fa-envelope" style="color: #070b81;"></i>
+                      </span>
+                      amaxan@gmail.com
+                  </p>
               </div>
           </div>
-          <div class="contact-form">
-              <form action="#" method="post">
-                <div class="contact-form-grid-2">
-                  <div class="form-group">
-                      <label for="nom">Nom</label>
-                      <input type="text" id="nom" name="nom" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="mail">Email</label>
-                      <input type="email" id="mail" name="mail" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="telephone">Téléphone</label>
-                      <input type="tel" id="telephone" name="telephone" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="expertise">Expertises</label>
-                      <select id="expertise" name="expertise[]" class="form-group" multiple>
-                          <option value="famille">Famille</option>
-                          <option value="placement">Placement</option>
-                          <option value="entrepreneurs">Entrepreneurs</option>
-                          <option value="emprunt">Emprunt</option>
-                          <option value="assistance">Assistance Administrative</option>
-                          <option value="impots">Fiscalité</option>
-                      </select>
-                  </div>
-                  <div class="form-group" style="grid-column: span 2;"> <!-- Permet au champ de message de prendre toute la largeur -->
-                      <label for="message">Message</label>
-                      <textarea id="message" name="message" class="wide-input" placeholder="Message" required style="font-weight: lighter;"></textarea>
-                  </div>
-                  <div class="button-form-block">
-                    <input type="submit" value="ENVOYER" data-wait="Please wait" class="button-form">
-                  </div>
-                </div> <!-- Bouton sous le champ de message -->
-            </form>
-          </div>
+      </div>
+      <div class="contact-form">
+          <form action="#" method="post">
+            <div class="contact-form-grid-2">
+              <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="nom" required>
+              </div>
+              <div class="form-group">
+                  <label for="mail">Email</label>
+                  <input type="email" id="mail" name="mail" required>
+              </div>
+              <div class="form-group">
+                  <label for="telephone">Téléphone</label>
+                  <input type="tel" id="telephone" name="telephone" required>
+              </div>
+              <div class="form-group">
+                  <label for="expertise">Expertises</label>
+                  <select id="expertise" name="expertise[]" class="form-group" multiple>
+                      <option value="famille">Famille</option>
+                      <option value="placement">Placement</option>
+                      <option value="entrepreneurs">Entrepreneurs</option>
+                      <option value="emprunt">Emprunt</option>
+                      <option value="assistance">Assistance Administrative</option>
+                      <option value="impots">Fiscalité</option>
+                  </select>
+              </div>
+              <div class="form-group" style="grid-column: span 2;"> <!-- Permet au champ de message de prendre toute la largeur -->
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" class="wide-input" placeholder="Message" required style="font-weight: lighter;"></textarea>
+              </div>
+              <div class="button-form-block">
+                <input type="submit" value="ENVOYER" data-wait="Please wait" class="button-form">
+              </div>
+            </div> <!-- Bouton sous le champ de message -->
+        </form>
       </div>
   </div>
+</div>
 
+<!-- Inclure jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Inclure le CSS de Select2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+<!-- Inclure le JavaScript de Select2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 <script>
-    // Initialize Select2 on the select element
-    // Initialize Select2 on the select element
 $(document).ready(function() {
-    $('#expertise').select2({
-        placeholder: 'Veuillez sélectionner en cliquant', // Placeholder text
-        allowClear: true, // Option to clear selection
-        closeOnSelect: false, // Keep the dropdown open after selection
-    });
+  // Initialiser Select2 sur l'élément select
+  $('#expertise').select2({
+    placeholder: 'Cliquez pour sélectionner', // Texte de remplacement
+    allowClear: true, // Option de suppression de la sélection
+    closeOnSelect: false, // Conserver la boîte déroulante ouverte après la sélection
+  });
+
+  // Fonction pour ajuster la hauteur de la boîte de sélection Select2
+  function adjustSelect2Height() {
+    var select2Container = $('.select2-container--open'); // Obtenir le conteneur Select2
+    var select2Results = select2Container.find('.select2-results'); // Obtenir la liste des résultats
+
+    // Calculer la hauteur en fonction du nombre d'éléments sélectionnés
+    var selectedItems = $('#expertise').val();
+    var height = selectedItems ? selectedItems.length * 30 : 0; // Ajustez 30 à la hauteur souhaitée pour un élément
+
+    // Définir une hauteur minimale et assurez-vous qu'elle n'est pas trop grande
+    height = Math.min(300, height); // Hauteur maximale de 300 pixels
+
+    // Appliquer la hauteur à la liste des résultats
+    select2Results.css('max-height', height + 'px');
+  }
+
+  // Appeler la fonction initialement et à chaque sélection ou désélection d'élément
+  adjustSelect2Height();
+  $('#expertise').on('change', function() {
+    adjustSelect2Height();
+  });
 });
 </script>
-
-</body>
-</html>

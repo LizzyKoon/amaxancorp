@@ -9,11 +9,35 @@
   margin-right: 96px;
 }
 
-/* Style the "Expertises" menu item when hovered */
-.navbar ul li.dropdown:hover > a {
-  background-color: $blue; /* Set the background color to the hover color */
+
+.navbar ul li a {
+  background-color: transparent; /* Set initial background color */
+  color: $blue;
+  display: inline-block;
+  box-sizing: border-box; /* Include padding within the element's width */
+  border: 8px solid transparent; /* Create transparent border for spacing */
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: $blue; /* Change background color on hover */
   color: white;
-  padding: 8px 16px; /* Set the text color to the hover color */
+}
+
+.navbar ul li.dropdown ul.dropdown-menu li a {
+  background-color: transparent; /* Set initial background color */
+  color: $blue;
+  display: inline-block;
+  box-sizing: border-box; /* Include padding within the element's width */
+  border: 8px solid transparent; /* Create transparent border for spacing */
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.navbar ul li.dropdown ul.dropdown-menu li a:hover {
+  background-color: $blue-pastel; /* Change background color on hover */
+  color: white; /* Change text color on hover */
 }
 
 /* Style the dropdown container */
@@ -22,26 +46,6 @@
   padding: 10px; /* Add padding to the dropdown menu for spacing */
 }
 
-/* Style the dropdown items when hovered */
-.navbar ul li.dropdown ul.dropdown-menu li a:hover {
-  background-color: $blue-pastel;
-  color: white;
-  padding: 8px 16px;
-  display: block;
-  transition: background-color 0.2s, padding 0.2s, line-height 0.9;
-  line-height: 0.9;
-  align-items: center;
-}
-
-/* Style the "A Propos" and "Contact" items when hovered */
-.navbar ul li a:hover {
-  text-decoration: none;
-  background-color: $blue;
-  color: white;
-  padding: 8px 16px;
-  transition: background-color 0.2s, padding 0.2s, line-height 0.9;
-  line-height: 0.9;
-}
 
 
 /* Style the container within the navbar */

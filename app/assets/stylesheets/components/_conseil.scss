@@ -77,7 +77,8 @@
   .conseils-footer-card-icon {
     flex: 30%;
     margin:0;
-    padding: 5%;
+    padding-left: 20%;
+    padding-bottom: 1%;
     text-align: center;/* Adjust the margin as needed */
   }
 
@@ -165,10 +166,7 @@
   }
 
   .conseils-footer-card-icon {
-    flex: 30%;
-    margin:0;
-    padding: 5%;
-    text-align: center;/* Adjust the margin as needed */
+    display: none; /* Adjust the spacing between the icon and text */
   }
 
   .conseils-footer-card-text {
@@ -191,8 +189,7 @@
   }
 
   .conseil-icon {
-    width: 50px; /* Adjust conseil icon size */
-    height: 50px;
+    display: none;
   }
 
   .container-conseils {

@@ -6,8 +6,9 @@
     </div>
 
     <div class="banner-intro-expertise blue">
-          <div class="container-expertise">
+          <div class="wrapper-expertise">
               <div class="container-expertise-content">
+                <%= image_tag("buildings-purple.png", alt: "buildings-purple", id: "buildings-purple") %>
                 <div class="expertise-text">
                    <p>Pour bien choisir vos placements, considérez deux grandes catégories : financiers et immobiliers.</p>
 
@@ -23,14 +24,18 @@
 
                   <p>A ce titre le chef d’entreprise sera plus exposé et devra être très attentif à ces thèmes.</p>
                   <p>Ces actions apporteront la sérénité et seront source de gains non négligeables qui pourront être affectés à la valorisation de sa retraite ou à la défiscalisation des revenus.</p>
-
-                  <h2>Transmettre</h2>
+                </div>
+            </div>
+            <%# <div class="container-expertise-content">
+                <%= image_tag("palmiers.png", alt: "palmiers", id: "palmiers") %>
+                <%# <div class="expertise-text">
+                  <h3>Transmettre</h3>
                   <p>Les droits de succession peuvent obérer lourdement la valeur des patrimoines alors que le législateur a prévu tout un arsenal de dispositifs pour alléger leurs coûts sans se démunir tout en conservant voir améliorant l’enrichissement du donateur et des donataires.</p>
                   <p>Transmettre ou subir les pressions fiscales et familiales ? Une bonne gestion de son patrimoine passe par une bonne préparation successorale. Le patrimoine n’est pas létal, il survivra à son propriétaire. Organiser sa transmission et assurer sa prévoyance sera le gage d’une gestion patrimoniale réussie et optimisée.</p>
 
-                  <h2>Protéger le conjoint survivant</h2>
-                  <p>Si le conjoint survivant est exonéré de droit de succession, il n’est pas pour autant protégé de ses ayants droits. Des dispositions légales devront être engagées pour le protéger. Avec le vieillissement des populations, étudier une succession transgénérationnelle peut également avoir du sens. Nous vous confierons tous les outils pour une transmission sereine et réussie.</p>
-                </div>
+                  <h3>Protéger le conjoint survivant</h3>
+                  <p>Si le conjoint survivant est exonéré de droit de succession, il n’est pas pour autant protégé de ses ayants droits. Des dispositions légales devront être engagées pour le protéger. Avec le vieillissement des populations, étudier une succession transgénérationnelle peut également avoir du sens. Nous vous confierons tous les outils pour une transmission sereine et réussie.</p> %>
+                <%# </div> %> %>
             </div>
         </div>
     </div>
@@ -51,20 +56,33 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="pannel">
-            <p>
-              Comparatif des différents indices sur 30 ans de 1993 et 2023 des différents placements : (source Le Revenu) :
 
-              Hausse des prix          +57%
-              Livret A           +95%
-              SICAV Monétaires         +97%
-              Assurance vie en euros      +220%
-              Immobilier à Paris      +241%
-              Actions         +249%
-              OR          +517%
-              Actions avec dividendes réinvestis  +775%
+              <p><strong>Comparatif des différents indices sur 30 ans (1993-2023) pour différents placements</strong>
+              <em>(Source: Le Revenu)</em> :</p>
+              <ul class="list black">
+                <li>Hausse des prix : +57%</li>
+                <li>Livret A : +95%</li>
+                <li>SICAV Monétaires : +97%</li>
+                <li>Assurance vie en euros : +220%</li>
+                <li>Immobilier à Paris : +241%</li>
+                <li>Actions : +249%</li>
+                <li>Or : +517%</li>
+                <li>Actions avec dividendes réinvestis : +775%</li>
+              </ul>
 
-              Méfions-nous des précautions sémantiques qui disent qu’investir en actions présente un risque de perte en capital et qu’il faut investir qu’une toute petite partie de son capital. Investir en action n’est pas plus risqué que l’immobilier pour celui qui connaît le prix à payer de cet investissement et qui s’engage à le respecter pendant toute la durée de son investissement. Cependant des mauvais choix et un manque de connaissances peuvent entrainer des pertes importantes irrécupérables. Il convient préalablement de déterminer sa capacité à accepter le risque de perte et de définir une stratégie.
-            </p>
+
+              <%# <p>Conseils d'investissement</p> %>
+              <%# <p>
+                Méfions-nous des précautions sémantiques qui disent qu’investir en actions présente un risque de perte
+                en capital et qu’il faut investir qu’une toute petite partie de son capital.
+              </p> %>
+              <%# <p>Investir en action n’est pas plus risqué que l’immobilier pour celui qui connaît le prix à payer de
+              cet investissement et qui s’engage à le respecter pendant toute la durée de son investissement.</br> %>
+              <%# <br>
+              Cependant, des mauvais choix et un manque de connaissances peuvent entraîner des pertes importantes irrécupérables.
+              Il convient préalablement de déterminer sa capacité à accepter le risque de perte et de définir une stratégie.
+              </p> %>
+
           </div>
         </div>
 
@@ -74,28 +92,31 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="pannel">
-            <p>
-              Investir à très long terme 5 à 10 ans minimum
-              Diversifier largement les valeurs ou supports d’investissement.
-              Coupler son investissement en actions avec des obligations et des fonds de trésorerie sur des indices larges.
-              Investir en actions, c’est accepter la volatilité et ne pas spéculer.
-              Limiter les frais au maximum !
-              Pour plus de sérénité, optez pour des fonds structurés aux conditions pré définies par contrat.
-              Pensez à vous faire accompagner par un Conseiller Financier.
-
-            </p>
+            <p>Voici les points clés :</p>
+            <ul class="list black">
+              <li>Investir à très long terme, 5 à 10 ans minimum</li>
+              <li>Diversifier largement les valeurs ou supports d’investissement</li>
+              <li>Coupler son investissement en actions avec des obligations et des fonds de trésorerie sur des indices larges</li>
+              <li>Investir en actions, c’est accepter la volatilité et ne pas spéculer</li>
+              <li>Limiter les frais au maximum !</li>
+              <li>Pour plus de sérénité, optez pour des fonds structurés aux conditions pré définies par contrat</li>
+              <li>Pensez à vous faire accompagner par un Conseiller Financier</li>
+            </ul>
           </div>
         </div>
 
         <div class="faq">
           <button class="accordion">
-            Quel est l’Impact de la fiscalité ?
+            Quel est l’impact de la fiscalité ?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="pannel">
             <p>
-              Avec un compte-titres ordinaire, les revenus de votre portefeuille sont imposables chaque année, que vous les perceviez ou les réinvestissiez. Ils sont soumis au prélèvement forfaitaire unique de 30 %, incluant 17,2 % de prélèvements sociaux, sauf option lors du dépôt de la déclaration de revenus l'année suivant leur perception pour une imposition au barème progressif de l'impôt sur le revenu.
-
+              Avec un compte-titres ordinaire, les revenus de votre portefeuille sont imposables chaque année,
+              que vous les perceviez ou les réinvestissiez. Ils sont soumis au prélèvement forfaitaire unique de 30 %,
+              incluant 17,2 % de prélèvements sociaux, sauf option lors du dépôt de la déclaration de revenus l'année
+              suivant leur perception pour une imposition au barème progressif de l'impôt sur le revenu.</br>
+              <br>
               Même chose si vous revendez des titres ou des parts de sicav ou de fonds commun de placement, la plus-value est systématiquement soumise au prélèvement forfaitaire unique (PFU) de 30 %, même si vous réinvestissez immédiatement le prix de vente dans d'autres actifs comparables. Elle est également soumise au PFU de 30 %.
             </p>
           </div>
@@ -120,7 +141,11 @@
           </button>
           <div class="pannel">
             <p>
-              Les supports de placement en valeurs mobilières sont des véhicules privilégiés pour investir dans la finance solidaire et durable, les thématiques environnementales et climatiques sous forme de fonds ISR. Un choix très large de fonds permet de  choisir des entreprises et des fonds vertueux.
+              Les supports de placement en valeurs mobilières sont des véhicules privilégiés pour investir dans la finance solidaire et durable,
+              les thématiques environnementales et climatiques sous forme de fonds ISR.
+            </p>
+            <p>
+              Un choix très large de fonds permet de  choisir des entreprises et des fonds vertueux.
               Notre avis est précieux pour choisir le fonds ISR qui conviendra le mieux selon les profils de risques.
             </p>
           </div>

@@ -1,13 +1,14 @@
 <div class="banner-home white">
   <div class="container">
-    <h1 class="title">Conseil en<br>Gestion de Patrimoine</h1>
-    <h1>&</h1>
-    <h1>Investissements Financiers</h1>
-    <a class="button-cover" href="#">EN SAVOIR PLUS</a>
+    <h1 class="title">Conseil en Gestion de Patrimoine</h1>
+    <h1>& Investissements Financiers</h1>
+    <%= link_to("EN SAVOIR PLUS", root_path(anchor: 'conseil'), class: "button-cover") %>
   </div>
 </div>
 
-<%= render "conseil" %>
+<a id="conseil">
+  <%= render "conseil" %>
+</a>
 
 <%= render "expertises" %>
 
@@ -19,4 +20,6 @@
   <%= render "methodologie" %>
 </div>
 
-<%= render "contact" %>
+<div id="contact">
+  <%= render "contact" %>
+</div>

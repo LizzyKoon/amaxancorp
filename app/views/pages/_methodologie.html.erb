@@ -2,9 +2,8 @@
   <div class="container">
     <h1 class="title">Une Approche<br>en 2 étapes.</h1>
     <div class="methodologie-1">
-      <h2><span class="large-number">1.</span> <sup class="small-text">ANALYSER VOTRE SITUATION</sup></h2>
-      <p>Nous analyserons d’abord votre situation au travers d’outils pragmatiques :</p>
-
+      <%# <h2><span class="large-number">1.</span> <sup class="small-text-methodologie">ANALYSER VOTRE SITUATION</sup></h2> %>
+      <h2 class="small-text-methodologie">1. ANALYSER VOTRE SITUATION</h2>
       <div class="cards-bilan">
         <div class="card-bilan">
           <div class="icon">
@@ -56,7 +55,8 @@
 
     </div>
     <div class="methodologie-2">
-      <h2><span class="large-number">2.</span> <sup class="small-text">VOUS CONSEILLER</sup></h2>
+      <%# <h2><span class="large-number">2.</span> <sup class="small-text-methodologie">VOUS CONSEILLER</sup></h2> %>
+      <h2 class="small-text-methodologie">2. VOUS CONSEILLER</h2>
       <p>Viens ensuite l’étape difficile qui permet de rapprocher vos besoins et
       les moyens dont vous disposez pour y parvenir. C’est l’écart entre désirs et réalités.<br>
       </br>
@@ -94,6 +94,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var buttons = document.querySelectorAll(".faq button");
+  const cards = Array.from(document.querySelectorAll('.card-bilan'));
 
   buttons.forEach(function (button) {
     button.addEventListener("click", function () {
@@ -117,20 +118,20 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         panel.style.display = "block";
       }
+
+      // Display the cards when a button is clicked
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show-card'); // Add animation class
+        }, index * 250); // Add a delay for each card
+      });
     });
   });
 
-  // Fermez toutes les FAQ lors du chargement de la page
-  buttons.forEach(function (button) {
-    button.classList.remove("opened");
-    button.nextElementSibling.style.display = "none";
-  });
-
-  const cards = Array.from(document.querySelectorAll('.card-bilan')); // Select all card elements
+  const firstCard = cards[0];
   const windowHeight = window.innerHeight;
 
   function handleScroll() {
-    const firstCard = cards[0];
     const rect = firstCard.getBoundingClientRect();
     const cardHeight = rect.height;
 
@@ -146,6 +147,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  window.addEventListener('scroll', handleScroll);
+  // Check if the user arrived via the "méthodologie" link in the navbar
+  const urlParams = new URLSearchParams(window.location.search);
+  const methodologieParam = urlParams.get("methodologie");
+  if (methodologieParam === "true") {
+    // Directly display the cards
+    cards.forEach((card, index) => {
+      card.classList.add('show-card'); // Add animation class
+    });
+  } else {
+    // Enable the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+  }
 });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   var visionTitle = document.querySelector(".small-text-methodologie");
+//   var windowHeight = window.innerHeight;
+
+//   function handleScroll() {
+//     var rect = visionTitle.getBoundingClientRect();
+//     var titleHeight = visionTitle.offsetHeight;
+
+//     if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+//       // Le titre est à mi-chemin de la fenêtre.
+//       visionTitle.style.transform = 'translateX(0)';
+//       visionTitle.style.opacity = 1;
+//       window.removeEventListener('scroll', handleScroll);
+//     }
+//   }
+
+//   // Styles initiaux pour le titre (caché au départ).
+//   visionTitle.style.transform = 'translateX(-100%)';
+//   visionTitle.style.opacity = 0;
+
+//   // Ajoute un écouteur d'événement de défilement pour appeler la fonction "handleScroll" à chaque défilement.
+//   window.addEventListener('scroll', handleScroll);
+
+//   // Déclencher immédiatement si le titre est déjà visible (par exemple, si la page est rechargée en position de défilement au milieu du titre).
+//   if (window.scrollY + windowHeight / 2 >= visionTitle.getBoundingClientRect().top) {
+//     handleScroll();
+//   }
+// });
 </script>

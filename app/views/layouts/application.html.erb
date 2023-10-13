@@ -45,7 +45,10 @@
   </head>
     <body>
       <%= render "shared/navbar" %>
-      <%= yield %>
+        <main>
+    <!-- Contenu principal de la page -->
+          <%= yield %>
+        </main>
        <%= render "shared/footer" %>
     </body>
 </html>

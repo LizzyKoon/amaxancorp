@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get "/methodologie", to: "pages#methodologie"
 
+  get "/conseil", to: "pages#conseil"
+
   # Page Famille
   get '/famille', to: 'famille#index', as: 'famille'
   # Nom du fichier HTML : famille.html.erb

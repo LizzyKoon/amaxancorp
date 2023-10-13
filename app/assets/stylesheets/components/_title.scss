@@ -1,6 +1,8 @@
 @media (min-width: 768px) {
   .title {
-    display: block; /* Display each title on a separate line for small screens */
+    white-space: nowrap; /* Prevent line breaks on large screens */
+    overflow: hidden;    /* Hide the overflow text */
+    text-overflow: ellipsis; /* Add an ellipsis if the text overflows */
   }
 }
 
@@ -10,7 +12,8 @@
     display: none;
   }
 
-  .title {
-    display: inline; /* Display the titles inline */
+   .title {
+    white-space: normal; /* Allow line breaks on small screens */
+    text-overflow: clip; /* Disable ellipsis on small screens */
   }
 }
