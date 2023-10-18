@@ -27,10 +27,6 @@
   clear: both;
 }
 
-.clear h3 {
-  padding-top: 20px;
-}
-
 .banner-intro-expertise {
   padding-top: 48px;
   padding-left: 96px;
@@ -68,6 +64,21 @@
 
 .container-expertise-content {
   margin-top: 20px;
+  h1 {
+    padding-top: 30px;
+  }
+  h2 {
+    padding-top: 30px;
+    text-align: left;
+  }
+  h3 {
+    padding-top: 20px;
+    // text-align: left;
+  }
+}
+
+.clear h3 {
+  padding-top: 20px;
 }
 
 .wrapper-expertise {
@@ -210,9 +221,6 @@
     width: 100%; /* La largeur de l'image occupera toute la largeur de son contenant */
     float: none; /* Annuler la flottaison de l'image */
   }
-// .container-expertise-content {
-//   margin-top: 20px;
-// }
 
   .wrapper-expertise {
     display: block;
