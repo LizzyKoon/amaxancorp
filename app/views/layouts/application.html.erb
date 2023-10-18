@@ -27,6 +27,10 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      html,body{
+        width:100%;
+        overflow-x:hidden;
+      }
       div {
         margin-left: 96px;
         margin-right: 96px;
@@ -41,7 +45,10 @@
   </head>
     <body>
       <%= render "shared/navbar" %>
-      <%= yield %>
+        <main>
+    <!-- Contenu principal de la page -->
+          <%= yield %>
+        </main>
        <%= render "shared/footer" %>
     </body>
 </html>

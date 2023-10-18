@@ -1,7 +1,7 @@
 <nav class="navbar sticky-top">
   <div class="container-navbar">
     <%= link_to root_path do %>
-      <%= image_tag("logo-amaxan.png", alt: "logo-amaxan", id: "logo-amaxan") %>
+      <%= image_tag("logo-amaxan-bleu.png", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
     <% end %>
     <ul class="desktop-menu">
       <li><%= link_to "A Propos", root_path(anchor: 'apropos') %></li>
@@ -17,7 +17,7 @@
         </ul>
       </li>
       <li><%= link_to "Methodologie", root_path(anchor: 'methodologie') %></li>
-      <li><a href="#">Contact</a></li>
+      <li><%= link_to "Contact", root_path(anchor: 'contact') %></li>
     </ul>
   </div>
 </nav>

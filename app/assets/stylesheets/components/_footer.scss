@@ -1,12 +1,12 @@
 .footer {
-  background: linear-gradient($blue-pastel, $pink-pastel);
-  height: 200px;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
+  background-color: white;
+  height: 192px;
   display: flex;
-  justify-content: space-around;
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+  margin-left: 96px;
+  margin-right: 96px;
 }
 
 .footer-links {
@@ -24,7 +24,4 @@
 }
 .footer-links a:hover {
   opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
 }

@@ -1,18 +1,25 @@
 .methodologie-1 {
-  margin-top: 96px;
-  margin-bottom: 96px;
+  margin-left: 15%;
+  margin-right:15%;
+  margin-top: 36px;
   h2 {
     text-align: left;
+    font-size: 24px;
   }
 }
 
 .methodologie-2 {
-  margin-top: 96px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 36px;
   h2 {
     text-align: left;
+    font-size: 24px;
   }
   p {
-    margin-top: 96px;
+    margin-top: 64px;
+    text-align: justify;
+    text-align: left;
   }
 }
 
@@ -23,9 +30,9 @@
   }
 }
 
-.small-text {
-  font-size: 24px; /* Modifiez cette valeur selon la taille de police souhaitée pour le texte superposé */
-  position: relative;
-  top: -20px;
-  left: -19px;/* Ajustez cette valeur pour régler la position verticale du texte superposé */
-}
+// .small-text-methodologie {
+//   font-size: 36px; /* Modifiez cette valeur selon la taille de police souhaitée pour le texte superposé */
+//   // position: relative;
+//   // top: -20px;
+//   // left: -19px;/* Ajustez cette valeur pour régler la position verticale du texte superposé */
+// }

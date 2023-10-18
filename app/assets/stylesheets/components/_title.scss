@@ -1,3 +1,19 @@
-/* Your existing CSS code */
+@media (min-width: 768px) {
+  .title {
+    white-space: nowrap; /* Prevent line breaks on large screens */
+    overflow: hidden;    /* Hide the overflow text */
+    text-overflow: ellipsis; /* Add an ellipsis if the text overflows */
+  }
+}
 
-/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .complementarite,
+  .remuneration {
+    display: none;
+  }
+
+   .title {
+    white-space: normal; /* Allow line breaks on small screens */
+    text-overflow: clip; /* Disable ellipsis on small screens */
+  }
+}

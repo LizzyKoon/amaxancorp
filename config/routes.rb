@@ -5,11 +5,15 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "pages#home"
 
-  get "contact", to: "pages#contact"
-
+  get '/contact', to: 'contact#new'
+  post '/contact', to: 'contact#create'
+  get '/contact/confirmation', to: 'contact#confirmation'
+ 
   get "/apropos", to: "pages#apropos"
 
   get "/methodologie", to: "pages#methodologie"
+
+  get "/conseil", to: "pages#conseil"
 
   # Page Famille
   get '/famille', to: 'famille#index', as: 'famille'

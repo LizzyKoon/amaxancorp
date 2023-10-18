@@ -1,173 +1,49 @@
-.container-fluid {
-  padding: 0;
-}
+@media screen and (min-width: 1025px) {
 
-.container {
-  animation-direction: normal;
-  animation-delay: 1s;
-  padding-left: 96px;
-}
+  .container-fluid {
+    padding: 0;
+  }
 
-.container-conseils {
-  display: block;
-  margin: 0;
-  padding-top: 96px;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
+    // padding-left: 96px;
+  }
 
-.container-conseils-top {
-  display: flex; /* Utilisez Flexbox pour aligner les éléments enfants */
-  justify-content: space-between; /* Alignez les éléments en les espaçant équitablement */
-  align-items: flex-start;
-  width: auto;
-  margin: auto;
-}
-
-.conseil-icon {
-  display: block;
-  height: 90px;
-  width: 90px;
-  margin: auto;
-}
-
-.conseil {
-  flex: 1; /* Faites en sorte que chaque bloc de texte prenne une part égale de l'espace disponible */
-  border: 1px solid #ccc; /* Ajoutez une bordure pour la délimitation */
-  width: 450px;
-  text-align: justify;
-  border: none;
-  margin: 0;
-  padding-left: 90px;
-  padding-right : 90px;
-}
-
-.conseil-text{
-  margin: 0;
-  padding-top: 20px;
-  h2 {
-    padding-bottom: 10px;
+  .container-expertise-home {
+    padding-left:0;
+    padding-right:0;
+    margin:0;
   }
 }
 
-.conseil-text-title{
-  margin: 0;
-  text-align: center;
-  width: auto;
-  height: 50px;
-  margin-bottom: 40px;
-  vertical-align: middle;
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
-}
+  .container-fluid {
+    padding: 0;
+  }
 
-.container-conseils-top {
-  display: flex;
-}
+  .container-home {
+    animation-direction: normal;
+    animation-delay: 1s;
+    padding-left: 96px;
+  }
 
-.conseils-footer {
-  margin-top: 96px;
-  h3 {
-    padding-bottom: 18px;
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 0;
-    padding-bottom: 8px;
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
+    padding-left: 96px;
+  }
+
+  .container-expertise-home {
+    padding-left:0;
+    padding-right:0;
+    margin:0;
   }
 }
 
-.conseils-footer-card {
-  display: flex;
-  margin: 0;
-}
-
-.conseils-footer-card-icon {
-  width: 50px;
-}
-
-.conseils-footer-card-text {
-  padding-bottom: 40px;
-  h3 {
-    text-align: left;
-  }
-}
-
-// h1, h2, h3 {
-//   margin: 0;
-//   font-family: $headers-font;
-// }
-
-// p {
-//   font-size: 16px;
-//   font-family: $body-font;
-// }
-
-body {
-  margin: 0;
-}
-
-.container-apropos-content {
-  display: flex;
-  margin: 0;
-  padding-top: 96px;
-  padding-right: 96px;
-  padding-left: 96px;
-}
-
-.apropos-text {
-  margin: 0;
-  padding-right: 96px;
-  text-align: justify;
-}
-
-
-.apropos-text-signature {
-  text-align: right;
-}
-
-
-.container-expertise-home {
-  padding-left:0;
-  padding-right:0;
-  margin:0;
-}
-
-.container-expertise {
-  padding-left:96px;
-  padding-right:96px;
-}
-
-/* Media Query for iPhone 12 */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 768px) {
   .container {
     padding-left: 20px; /* Adjust padding for iPhone 12 */
-  }
-
-  .conseil {
-    width: 100%; /* Full width for smaller screens */
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .container-conseils-top {
-    flex-direction: column; /* Stack conseils vertically on smaller screens */
-  }
-
-  .conseil-icon {
-    width: 50px; /* Adjust conseil icon size */
-    height: 50px;
-  }
-
-  .container-conseils {
-    padding-top: 20px; /* Adjust padding for conseils container */
-  }
-
-  .conseils-footer {
-    margin-top: 20px; /* Adjust margin for footer */
-  }
-
-  .container-apropos-content {
-    flex-direction: column; /* Stack apropos content vertically on smaller screens */
-    padding: 20px;
   }
 }

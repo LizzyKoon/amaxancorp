@@ -1,119 +1,128 @@
 .cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0;
-}
-
-.cards-left,
-.cards-right {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.cards-right {
-  padding-top: 65px;
-}
-
-.cards-left h3 {
-  text-align: right;
-  padding-right: 25px;
-}
-
-.cards-right h3 {
-  text-align: left;
-  padding-left: 25px;
-}
-
-.card {
-  background-color: white;
-  font-size: 10px;
-  font-weight: 500;
-  height: 65px !important;
-  width: 640px;
-  margin: 0;
-  border-radius: 0 !important;
-  margin-top: 65px;
-  text-transform: uppercase;
-  border: none !important;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 1s ease, transform 1s ease;
-  text-decoration: none;
-  h3 {
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: $headers-font;
-    text-underline-position: auto;
-    padding-top: 10px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
   }
-}
 
-/* Réinitialisation des marges et paddings par défaut pour tous les éléments h3 */
-h3 {
-  margin: 0;
-  padding: 0;
-}
+  .cards-left,
+  .cards-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    flex: 1;
+  }
 
-/* Cartes de la droite - Apparaissent de la droite */
-.cards-right .card {
-  transform: translateX(20px); /* Faites apparaître les cartes de la droite par la droite */
-}
+  .cards-right {
+    padding-top: 65px;
+  }
 
-.show-card {
-  opacity: 1;
-  transform: translate(0);
-}
+  .cards-left h3 {
+    text-align: right;
+    padding-right: 25px;
+  }
 
+  .cards-right h3 {
+    text-align: left;
+    padding-left: 25px;
+  }
+
+  .card:hover {
+    text-decoration: none;
+  }
+
+  .card {
+    background-color: white;
+    font-size: 10px;
+    font-weight: 500;
+    height: 65px !important;
+    margin: 0;
+    border-radius: 0 !important;
+    margin-top: 65px;
+    text-transform: uppercase;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    text-decoration: none;
+    h3 {
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: $headers-font;
+      text-underline-position: auto;
+      padding-top: 10px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+
+  /* Réinitialisation des marges et paddings par défaut pour tous les éléments h3 */
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Cartes de la droite - Apparaissent de la droite */
+  .cards-right .card {
+    transform: translateX(20px); /* Faites apparaître les cartes de la droite par la droite */
+  }
+
+  .show-card {
+    opacity: 1;
+    transform: translate(0);
+  }
 
 /* Adjust card size for smaller screens */
 @media (max-width: 768px) {
+  .banner {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 64px;
+  }
 
   .banner-expertise-home p {
     font-size: 16px;
   }
 
   .card {
-    height: 50px; /* Adjust height for smaller screens */
-    font-size: 8px; /* Adjust font size for smaller screens */
+    height: auto; /* Remove fixed height */
+    font-size: 8px;
+    width: 100%; /* Set width to 100% to make cards adapt to screen size */
+    border-radius: 0; /* Remove border radius */
+    margin-top: 30px;
+    border: none !important;
     h3 {
       font-size: 12px; /* Adjust font size for smaller screens */
       padding-top: 5px;
-      margin: 0px; /* Adjust padding for smaller screens */
+      margin: 0; /* Adjust padding for smaller screens */
     }
   }
 
   .cards {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
-    align-items: center; /* Center align cards */
-    padding-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: space-between; /* Align cards evenly within the container */
+    padding-bottom: 36px;
   }
 
-  .cards-right .card {
-    transform: none; /* Faites apparaître les cartes de la droite par la droite */
-  }
-
-  .cards-left .cards-right {
-    padding-top: 0px;
+  .cards-left,
+  .cards-right {
+    width: 100%; /* Adjust width for smaller screens */
   }
 
   .cards-right {
-    padding-top: 0px;
+    padding-top: 35px;
   }
 
-  // .cards-right .card {
-  //   transform: translateX(20px); /* Faites apparaître les cartes de la droite par la droite */
-  // }
+  .cards-right .card {
+    transform: translateX(0px); /* Reset any previous transform */
+  }
 
-  .cards-left h3,
-  .cards-right h3 {
-    text-align: center; /* Center the text on smaller screens */
-    padding: 0; /* Remove padding */
+  .cards-right .card {
+    padding-top: 0px; /* Remove any previous padding */
   }
 }
