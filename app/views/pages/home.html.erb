@@ -1,7 +1,7 @@
 <div class="banner-home white">
   <div class="container">
     <h1 class="title">Conseil en Gestion de Patrimoine</h1>
-    <h1>& Investissements Financiers</h1>
+    <h1>Conseil en Investissements Financiers</h1>
     <%= link_to("EN SAVOIR PLUS", root_path(anchor: 'conseil'), class: "button-cover") %>
   </div>
 </div>
@@ -10,7 +10,9 @@
   <%= render "conseil" %>
 </a>
 
-<%= render "expertises" %>
+<div id="expertises">
+  <%= render "expertises" %>
+</div>
 
 <div id="apropos">
   <%= render "apropos" %>
