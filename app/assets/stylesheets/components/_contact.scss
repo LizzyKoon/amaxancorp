@@ -5,14 +5,18 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin: 36px;
+      // margin: 36px;
   }
 
   .contact-info {
       margin-left: 0;
       width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0;
       h1 {
-          margin-top: 20px;
+          margin-top: 30px;
           margin-bottom: 10px;
       }
   }
@@ -33,15 +37,9 @@
       margin-bottom: 20px;
   }
 
-  .contact-info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-right: 0;
-  }
-
   .contact-details {
       margin: 0;
+      padding-top: 10%;
   }
 
   .contact-phone,
@@ -96,12 +94,12 @@
 
   .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     border: none !important;
+    padding-right: 10px;
   }
 
   .select2-container--default .select2-selection--multiple .select2-selection__choice {
     color: $blue;
     border: none !important;
-    padding-right: 10px;
   }
 
   #message {
@@ -147,33 +145,59 @@
   }
 }
 @media (max-width: 768px) {
+  /* Adjust form inputs */
 
-.contact-container {
-        display: block; /* Display as blocks for small screens */
-        margin-left: 36px;
-        margin-right: 36px;
-    }
+  .contact-container {
+    padding: 36px;
+  }
 
-.contact-info {
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
     width: 100%;
-}
+    padding: 8px; /* Adjust padding for better spacing */
+    font-size: 14px; /* Reduce font size for mobile */
+    border: none; /* Remove border for cleaner look */
+    border-radius: 0; /* Remove border-radius */
+  }
 
-.contact-form {
-    width: auto;
-}
+  /* Adjust Select2 styles for mobile */
+  .select2-container--default .select2-selection--multiple,
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    padding: 5px; /* Reduce padding for Select2 */
+  }
 
-.contact-form-grid-2 {
-    display: block; /* Display as blocks for small screens */
-}
+  /* Adjust textarea */
+  #message {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
+    height: 150px; /* Reduce height for mobile */
+    font-size: 14px; /* Reduce font size for mobile */
+  }
 
-.button-form {
-  margin: 10px;
-}
+  /* Adjust margins and spacing */
+  .form-group {
+    margin: 5px; /* Reduce margin for form elements */
+  }
 
-select#expertise::placeholder {
-  font-family: 'Libre Franklin', sans-serif; /* Remplacez 'Nouvelle Police' par la police de votre choix */
-  font-size: 14px; /* Taille de police de votre choix */
-  color: #999; /* Couleur de police de votre choix */
-  /* Autres styles de texte pour le placeholder */
-}
+  .form-group label {
+    margin-bottom: 3px; /* Reduce margin below labels */
+  }
+
+  .button-form {
+    width: 100%;
+    padding: 10px;
+    background-color: #070B81;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button-form-block {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    margin: 0; /* Remove margin setting to prevent pushing the button down */
+  }
 }

@@ -1,82 +1,122 @@
-.cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0;
-  }
-
-  .cards-left,
-  .cards-right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    flex: 1;
-  }
-
-  .cards-right {
-    padding-top: 65px;
-  }
-
-  .cards-left h3 {
-    text-align: right;
-    padding-right: 25px;
-  }
-
-  .cards-right h3 {
-    text-align: left;
-    padding-left: 25px;
-  }
-
-  .card:hover {
-    text-decoration: none;
-  }
-
-  .card {
-    background-color: white;
-    font-size: 10px;
-    font-weight: 500;
-    height: 65px !important;
-    margin: 0;
-    border-radius: 0 !important;
-    margin-top: 65px;
-    text-transform: uppercase;
-    border: none !important;
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
-    text-decoration: none;
-    h3 {
-      align-items: center;
-      font-size: 16px;
-      font-weight: bold;
-      font-family: $headers-font;
-      text-underline-position: auto;
-      padding-top: 10px;
-      letter-spacing: 1px;
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-
-  /* Réinitialisation des marges et paddings par défaut pour tous les éléments h3 */
-  h3 {
-    margin: 0;
+@media screen and (min-width: 1025px) {
+  .container-fluid {
     padding: 0;
   }
 
-  /* Cartes de la droite - Apparaissent de la droite */
-  .cards-right .card {
-    transform: translateX(20px); /* Faites apparaître les cartes de la droite par la droite */
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
   }
 
-  .show-card {
-    opacity: 1;
-    transform: translate(0);
+  .container-expertise-home {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container-fluid {
+    padding: 0;
   }
 
-/* Adjust card size for smaller screens */
+  .container-home,
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
+    padding-left: 96px;
+  }
+
+  .container-expertise-home {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.cards-left,
+.cards-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  flex: 1;
+}
+
+.cards-right {
+  padding-top: 65px;
+}
+
+.cards-left h3 {
+  text-align: right;
+  padding-right: 25px;
+}
+
+.cards-right h3 {
+  text-align: left;
+  padding-left: 25px;
+}
+
+.card:hover {
+  text-decoration: none;
+}
+
+.card {
+  background-color: white;
+  font-size: 10px;
+  font-weight: 500;
+  height: 65px !important;
+  margin: 0;
+  border-radius: 0 !important;
+  margin-top: 65px;
+  text-transform: uppercase;
+  border: none !important;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  text-decoration: none;
+}
+
+.card h3 {
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $headers-font;
+  text-underline-position: auto;
+  padding-top: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: $blue;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-right .card {
+  transform: translateX(20px);
+}
+
+.show-card {
+  opacity: 1;
+  transform: translate(0);
+}
+
 @media (max-width: 768px) {
   .banner {
     padding-left: 0px;
@@ -89,29 +129,30 @@
   }
 
   .card {
-    height: auto; /* Remove fixed height */
+    height: auto;
     font-size: 8px;
-    width: 100%; /* Set width to 100% to make cards adapt to screen size */
-    border-radius: 0; /* Remove border radius */
+    width: 100%;
+    border-radius: 0;
     margin-top: 30px;
     border: none !important;
-    h3 {
-      font-size: 12px; /* Adjust font size for smaller screens */
-      padding-top: 5px;
-      margin: 0; /* Adjust padding for smaller screens */
-    }
+  }
+
+  .card h3 {
+    font-size: 12px;
+    padding-top: 5px;
+    margin: 0;
   }
 
   .cards {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next row */
-    justify-content: space-between; /* Align cards evenly within the container */
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-bottom: 36px;
   }
 
   .cards-left,
   .cards-right {
-    width: 100%; /* Adjust width for smaller screens */
+    width: 100%;
   }
 
   .cards-right {
@@ -119,10 +160,7 @@
   }
 
   .cards-right .card {
-    transform: translateX(0px); /* Reset any previous transform */
-  }
-
-  .cards-right .card {
-    padding-top: 0px; /* Remove any previous padding */
+    transform: translateX(0px);
+    padding-top: 0px;
   }
 }
