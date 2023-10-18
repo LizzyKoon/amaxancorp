@@ -8,12 +8,21 @@ Rails.application.routes.draw do
   get '/contact', to: 'contact#new'
   post '/contact', to: 'contact#create'
   get '/contact/confirmation', to: 'contact#confirmation'
- 
+
   get "/apropos", to: "pages#apropos"
 
   get "/methodologie", to: "pages#methodologie"
 
+  get "/expertises", to: "pages#expertises"
+
+  get "/mentions_legales", to: "mentions_legales#index"
+
   get "/conseil", to: "pages#conseil"
+
+
+  # Page Retraite
+  get '/retraite', to: 'retraite#index', as: 'retraite'
+  # Nom du fichier HTML : famille.html.erb
 
   # Page Famille
   get '/famille', to: 'famille#index', as: 'famille'
