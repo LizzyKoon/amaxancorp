@@ -1,152 +1,49 @@
-.container-fluid {
-  padding: 0;
-}
+@media screen and (min-width: 1025px) {
 
-.container {
-  animation-direction: normal;
-  animation-delay: 1s;
-}
+  .container-fluid {
+    padding: 0;
+  }
 
-.container-conseils {
-  display: block;
-  padding: 96px;
-  margin: 0;
-  padding-top: 96px;
-  padding-bottom: 96px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
+    // padding-left: 96px;
+  }
 
-.container-conseils-top {
-  display: flex; /* Utilisez Flexbox pour aligner les éléments enfants */
-  justify-content: space-between; /* Alignez les éléments en les espaçant équitablement */
-  align-items: flex-start;
-  width: auto;
-  margin: auto;
-}
-
-@media(max-width: 900px) {
-  .container-conseils {
-    width: 500px;
+  .container-expertise-home {
+    padding-left:0;
+    padding-right:0;
+    margin:0;
   }
 }
 
-@media(max-width: 500px) {
-  .container-conseils {
-    width: 300px;
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .container-home {
+    animation-direction: normal;
+    animation-delay: 1s;
+    padding-left: 96px;
+  }
+
+  .container {
+    animation-direction: normal;
+    animation-delay: 1s;
+    padding-left: 96px;
+  }
+
+  .container-expertise-home {
+    padding-left:0;
+    padding-right:0;
+    margin:0;
   }
 }
 
-.conseil-icon {
-  display: block;
-  height: 90px;
-  width: 90px;
-  margin: auto;
-}
-
-.conseil {
-  flex: 1; /* Faites en sorte que chaque bloc de texte prenne une part égale de l'espace disponible */
-  border: 1px solid #ccc; /* Ajoutez une bordure pour la délimitation */
-  width: 450px;
-  text-align: justify;
-  border: none;
-  margin: 0;
-  padding-left: 90px;
-  padding-right : 90px;
-}
-
-.conseil-text{
-  margin: 0;
-  padding-top: 20px;
-  h2 {
-    padding-bottom: 10px;
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 20px; /* Adjust padding for iPhone 12 */
   }
-}
-
-.conseil-text-title{
-  margin: 0;
-  text-align: center;
-  width: auto;
-  height: 50px;
-  margin-bottom: 40px;
-  vertical-align: middle;
-
-}
-
-.container-conseils-top {
-  display: flex;
-}
-
-.conseils-footer {
-  margin-top: 96px;
-  h3 {
-    padding-bottom: 18px;
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 0;
-    padding-bottom: 8px;
-  }
-}
-
-.conseils-footer-card {
-  display: flex;
-  margin: 0;
-  padding-bottom: 40px;
-}
-
-.conseils-footer-card-icon {
-  width: 50px;
-}
-
-.conseils-footer-card-text {
-  padding-bottom: 40px;
-  h3 {
-    text-align: left;
-  }
-}
-
-
-.container-expertise {
-  margin:0;
-}
-
-// h1, h2, h3 {
-//   margin: 0;
-//   font-family: $headers-font;
-// }
-
-// p {
-//   font-size: 16px;
-//   font-family: $body-font;
-// }
-
-body {
-  margin: 0;
-}
-
-.container-vision-content {
-  display: flex;
-  margin: 0;
-  padding-top: 96px;
-  padding-bottom: 96px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-
-.vision-text {
-  margin: 0;
-  p {
-  padding-right: 50px;
-  text-align: justify;
-  }
-}
-
-
-.vision-text-signature {
-  text-align: right;
-}
-
-.elaborer-strategies {
-  margin-top: 96px;
 }

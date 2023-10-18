@@ -1,5 +1,6 @@
 require_relative "boot"
 
+#si besoin d'avoir des databases
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems

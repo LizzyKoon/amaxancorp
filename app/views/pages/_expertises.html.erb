@@ -1,59 +1,90 @@
-<div class="banner banner-gradient banner-expertise white">
-  <div class="container-expertise">
+<div class="banner banner-gradient banner-expertise-home white">
+  <div class="container-expertise-home">
     <div class="expertise-header">
       <h1>6 Domaines d'Expertise.</h1>
-      <p>Développés par 25 années d'expérience à faire prospérer votre patrimoine</p>
+      <p class="title">Développés par 25 années d'expérience à faire prospérer votre patrimoine</p>
     </div>
     <div class="cards">
       <div class="cards-left">
-        <div class="card">
+        <%= link_to famille_path, class: "card famille" do %>
           <h3>Famille</h3>
-        </div>
-        <div class="card">
-          <h3>Entrepreneurs <br>
-          & Professions Libérales</h3>
-        </div>
-        <div class="card">
+        <% end %>
+        <%= link_to entrepreneurs_path, class: "card entrepreneurs" do %>
+          <h3>Entrepreneurs & Professions Libérales</h3>
+        <% end %>
+        <%= link_to assistance_administrative_path, class: "card assistance" do %>
           <h3>Assistance Administrative</h3>
-        </div>
+        <% end %>
       </div>
       <div class="cards-right">
-        <div class="card">
+        <%= link_to placement_path, class: "card placement" do %>
           <h3>Placement</h3>
-        </div>
-        <div class="card">
+        <% end %>
+        <%= link_to emprunt_path, class: "card emprunt" do %>
           <h3>Emprunt</h3>
-        </div>
-        <div class="card">
-          <h3>Fiscalité</h3>
-        </div>
+        <% end %>
+        <%= link_to impots_path, class: "card impots" do %>
+          <h3>Impôts</h3>
+        <% end %>
       </div>
     </div>
+
+
   </div>
 </div>
 
-<%# <script>
-  console.log("Le code JavaScript s'exécute ici.");
+ <script>
+  const cardOrder = [
+    ".famille",
+    ".placement",
+    ".entrepreneurs",
+    ".emprunt",
+    ".assistance",
+    ".impots"
+  ];
 
-  // Fonction pour afficher les éléments "hidden" s'ils sont visibles à l'écran
+  const cards = cardOrder.map(selector => document.querySelector(selector));
+  const windowHeight = window.innerHeight;
+
   function handleScroll() {
-    var hiddenCards = document.querySelectorAll('.card.hidden');
+    const firstCard = cards[0];
+    const rect = firstCard.getBoundingClientRect();
+    const cardHeight = rect.height;
 
-    hiddenCards.forEach(function(card) {
-      var rect = card.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        card.classList.remove('hidden');
-      }
-    });
+    if (rect.top + cardHeight / 2 <= windowHeight / 2) {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show-card');
+        }, index * 250); // Ajoute un délai pour afficher chaque carte
+      });
+
+      // Désactive l'écouteur d'événement après l'affichage des cartes
+      window.removeEventListener('scroll', handleScroll);
+    }
   }
 
-  // Ajouter un écouteur d'événements de défilement avec un délai de 100 ms
-  var scrollTimeout;
-  window.addEventListener('scroll', function() {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(handleScroll, 100);
-  });
+  window.addEventListener('scroll', handleScroll);
+</script>
 
-  // Appel initial pour gérer les éléments visibles lorsque la page se charge
-  handleScroll();
-</script> %>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const allCards = document.querySelectorAll(".card"); // Sélectionne toutes les cartes
+
+    allCards.forEach(function (card) {
+      card.addEventListener("mouseover", function () {
+        allCards.forEach(function (otherCard) {
+          if (otherCard !== card) {
+            otherCard.style.opacity = "0.5"; // Réduit l'opacité des autres cartes à 0.5
+          }
+        });
+      });
+
+      card.addEventListener("mouseout", function () {
+        allCards.forEach(function (otherCard) {
+          otherCard.style.opacity = "1"; // Rétablit l'opacité d'origine (1) de toutes les cartes
+        });
+      });
+    });
+  });
+</script>

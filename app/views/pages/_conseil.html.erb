@@ -1,6 +1,6 @@
 <div class="banner banner-beige banner-conseil blue">
   <div class="container">
-    <h1>Un conseil en double dimension.</h1>
+   <h1 class="title">Un conseil<br>en double dimension.</h1>
     <div class="container-conseils">
       <div class="container-conseils-top">
         <div class="conseil">
@@ -13,10 +13,10 @@
               Le <strong>Conseil en Gestion de Patrimoine (CGP) </strong> est un stratégiste qui vous conseille sur
               l’organisation de votre patrimoine et accompagne les Particuliers et Entrepreneurs dans la construction
               d’une stratégie globale ou spécifique: placements financiers et  immobiliers, fiscalité, transmission, succession <br>
-              <br />
+              <%# <br />
               Il vous préconise des solutions d’investissement. Pour réaliser ces opérations nous disposons de toutes les
               compétences nécessaires : la Compétence Juridique à titre accessoire (CJA), un statut de Conseil en Investissement
-              Financier (CIF),  d’assureur de personnes et  d’une carte d’agent Immobilier.
+              Financier (CIF),  d’assureur de personnes et  d’une carte d’agent Immobilier. %>
               </p>
               </div>
           </div>
@@ -33,38 +33,41 @@
                 (gestionnaires d’actifs) pour mettre en adéquation les
                 placements à votre profil de risque et respecter vos
                 orientations (ex : fonds ISR sur la finance durable). <br>
-                <br />
+                <%# <br />
                 Le CIF ne gère pas directement votre argent. Ce sont  les gestionnaires qui investissent
                 votre argent dans leur fonds. Notre rôle consiste à les rencontrer les questionner,
                 comparer et auditer leurs fonds, leur options de gestion, les suivre et les surveiller très régulièrement
                 pour vous justifier leurs choix et éventuellement les arbitrer (modifier).
-                Pour réaliser ces tâches nous disposons d’outils de sélection performants.
+                Pour réaliser ces tâches nous disposons d’outils de sélection performants. %>
                 </p>
               </div>
           </div>
         </div>
       <div class="conseils-footer">
-          <div class="conseils-footer-card">
-            <div class="conseils-footer-card-icon">
-              <%= image_tag("puzzles.png", alt: "puzzles", id: "puzzles") %>
-            </div>
-             <div class="conseils-footer-card-text">
-            <h3>COMPLÉMENTARITÉ</h2>
-            <p>Ces deux activités recouvrent l’ensemble des besoins d’un client, particulier ou professionnel.</p>
-            </div>
+        <div class="conseils-footer-card">
+          <div class="conseils-footer-card-icon">
+            <%= image_tag("puzzles.png", alt: "puzzles", id: "puzzles") %>
           </div>
-          <div class="conseils-footer-card">
-            <div class="conseils-footer-card-icon">
-              <%= image_tag("arrows.png", alt: "arrows", id: "arrows") %>
-            </div>
-            <div class="conseils-footer-card-text">
-              <h3>RÉMUNÉRATION</h2>
-              <p>La première activité est rémunérée par des honoraires de conseil,
-              la seconde par des rétrocessions de commissions et de gestion.
-              </p>
-            </div>
+          <div class="conseils-footer-card-text">
+            <h3>COMPLÉMENTARITÉ</h3>
+            <p>Ces deux activités recouvrent l’ensemble des besoins d’un client,</br>
+            particulier ou professionnel.
+            </p>
           </div>
+        </div>
+        <div class="conseils-footer-card">
+          <div class="conseils-footer-card-icon">
+            <%= image_tag("arrows.png", alt: "arrows", id: "arrows") %>
+          </div>
+          <div class="conseils-footer-card-text">
+            <h3>RÉMUNÉRATION</h3>
+            <p>La première activité est rémunérée par des honoraires de conseil,</br>
+            la seconde par des rétrocessions de commissions et de gestion.
+            </p>
+          </div>
+        </div>
       </div>
+    </div>
     </div>
   </div>
 </div>

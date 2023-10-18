@@ -1,22 +1,25 @@
 <div class="banner-home white">
   <div class="container">
-    <h1>Conseil en Gestion de Patrimoine</h1>
-     <h1>et Investissements Financiers</h1>
-    <a class="button-48" href="#">EN SAVOIR PLUS</a>
+    <h1 class="title">Conseil en Gestion de Patrimoine</h1>
+    <h1>& Investissements Financiers</h1>
+    <%= link_to("EN SAVOIR PLUS", root_path(anchor: 'conseil'), class: "button-cover") %>
   </div>
 </div>
 
-<%= render "conseil" %>
+<a id="conseil">
+  <%= render "conseil" %>
+</a>
 
 <%= render "expertises" %>
 
-<%= render "vision" %>
+<div id="apropos">
+  <%= render "apropos" %>
+</div>
 
-<%= render "approche" %>
+<div id="methodologie">
+  <%= render "methodologie" %>
+</div>
 
-
-<div class="banner banner-beige CTA blue">
-  <div class="container">
-    <h1>Faire grandir et préserver son patrimoine.</h1>
-  </div>
+<div id="contact">
+  <%= render "contact/contact" %>
 </div>

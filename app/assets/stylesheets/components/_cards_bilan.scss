@@ -1,0 +1,110 @@
+/* Default styles for all screen sizes */
+.cards-bilan {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+}
+
+.card-bilan {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  margin: 0;
+  padding: 36px;
+  text-align: justify;
+  opacity: 0; /* Hide the cards initially */
+  transform: translateY(20px); /* Move the cards down initially */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.card-bilan .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.card-bilan .content {
+  text-align: center;
+  padding-top: 40px;
+  text-align: justify;
+  margin: 0;
+}
+
+.card-bilan .content-text {
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.card-bilan h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.card-bilan h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.card-bilan h3 {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.card-bilan p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.card-bilan.show-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* For screens between 769px and 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cards-bilan {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 100%; /* Set a maximum width to keep the grid within the container */
+    margin: 0;
+  }
+  .card-bilan.show-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For screens up to 768px */
+@media screen and (max-width: 768px) {
+  .cards-bilan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-bilan {
+    width: 100%; /* Make cards take the full width of the screen */
+    margin-bottom: 20px;
+  }
+
+  /* You may need to adjust the card padding and font sizes for small screens if necessary */
+  .card-bilan {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .card-bilan h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+  .card-bilan.show-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Adjust other styles as needed for small screens */
+}

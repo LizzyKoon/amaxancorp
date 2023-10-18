@@ -2,7 +2,13 @@ class PagesController < ApplicationController
   def home
   end
 
-  def about
+  def conseil
+  end
+
+  def apropos
+  end
+
+  def methodologie
   end
 
   def contact
