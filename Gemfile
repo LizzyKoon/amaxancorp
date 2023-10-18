@@ -24,7 +24,7 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
-gem 'dotenv-rails', require: 'dotenv/rails-now'
+# gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
