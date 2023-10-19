@@ -18,7 +18,7 @@
 }
 
 .banner-home {
-  background-image: url(asset_path('checkerboard.png'));
+  background-image: url(asset_path('checkerboard.jpg'));
   height: calc(100vh - 96px);
   align-items: center;
   background-size: cover;
@@ -180,7 +180,7 @@
   }
 
   .banner-home {
-    background-image: url(asset_path('checkerboard.png'));
+    background-image: url(asset_path('checkerboard.jpg'));
     height: 700px;
     align-items: center;
     background-size: cover;
