@@ -33,3 +33,4 @@
 # Ajoutez la ligne suivante pour ignorer le fichier .env
 .env
 .env*
+
