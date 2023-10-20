@@ -53,8 +53,8 @@ config.action_mailer.smtp_settings = {
   address: 'smtp.gmail.com',
   port: 587,
   user_name: 'audibert.maxence@gmail.com',
-  password: 'votre_mot_de_passe',
-  authentication: 'plain',
+  password: 'Lockedclub1993;',
+  authentication: 'login',
   enable_starttls_auto: true
 }
 
