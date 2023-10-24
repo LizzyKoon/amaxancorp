@@ -53,8 +53,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
     <div class="methodologie-2">
       <%# <h2><span class="large-number">2.</span> <sup class="small-text-methodologie">VOUS CONSEILLER</sup></h2> %>
       <h2 class="small-text-methodologie">2. VOUS CONSEILLER</h2>
@@ -63,26 +63,19 @@
       </br>
       Nous vous remettrons alors vos bilans, nos préconisations et simulations ainsi que la méthode
       pour accomplir sereinement  vos choix et  projets d’investissement.<br>
-        </br>
+      </br>
       Nous programmerons alors, si vous le souhaitez, un suivi annuel de mise à jour
-      de vos bilans et de nos préconisations accompagnée d’une synthèse de votre  enrichissement.
+      de vos bilans et de nos préconisations accompagnée d’une synthèse de votre  enrichissement. </br>
+      </br>
+      La mise en oeuvre de nos conseils nécessite les documents réglementaires suivants: </br>
+       </br>
+        - Un Document d’Identification et de Connaissance Client relatif à l’objet et la nature de notre relation</br>
+        - Un Document d’Entrée en Relation (DER) avec des mentions obligatoires</br>
+        - Une lettre de mission comportant les informations sur la nature et modalités de notre prestation, notre rémunération, la fourniture de nos conseils et des informations sur les frais et coûts des investissements conseillés</br>
+        - Un recueil d’Information pour collecter vos connaissances et expériences financières, votre tolérance au risque, aux pertes, vos objectifs et votre horizon de placement
+        - Un document de déclaration d’adéquation expliquant dans quelle mesure la recommandation est adaptée accompagnée des Documents d’Informations Clés des supports d’investissement
       </p>
-      <p>
-
-      <a href="#"  id="openModalLink">Documents</a>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close list" id="closeModal">&times;</span>
-              <ul>
-                  <li>Un Document d’Identification et de Connaissance Client relatif à l’objet et la nature de notre relation</li>
-                  <li>Un Document d’Entrée en Relation (DER) avec des mentions obligatoires</li>
-                  <li>Une lettre de mission comportant les informations sur la nature et modalités de notre prestation, notre rémunération, la fourniture de nos conseils et des informations sur les frais et coûts des investissements conseillés</li>
-                  <li>Un recueil d’Information pour collecter vos connaissances et expériences financières, votre tolérance au risque, aux pertes, vos objectifs et votre horizon de placement</li>
-                  <li>Un document de déclaration d’adéquation expliquant dans quelle mesure la recommandation est adaptée accompagnée des Documents d’Informations Clés des supports d’investissement</li>
-              </ul>
-        </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -173,34 +166,4 @@ closeModalButton.addEventListener("click", function() {
   modal.style.display = "none";
 });
 
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   var visionTitle = document.querySelector(".small-text-methodologie");
-//   var windowHeight = window.innerHeight;
-
-//   function handleScroll() {
-//     var rect = visionTitle.getBoundingClientRect();
-//     var titleHeight = visionTitle.offsetHeight;
-
-//     if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
-//       // Le titre est à mi-chemin de la fenêtre.
-//       visionTitle.style.transform = 'translateX(0)';
-//       visionTitle.style.opacity = 1;
-//       window.removeEventListener('scroll', handleScroll);
-//     }
-//   }
-
-//   // Styles initiaux pour le titre (caché au départ).
-//   visionTitle.style.transform = 'translateX(-100%)';
-//   visionTitle.style.opacity = 0;
-
-//   // Ajoute un écouteur d'événement de défilement pour appeler la fonction "handleScroll" à chaque défilement.
-//   window.addEventListener('scroll', handleScroll);
-
-//   // Déclencher immédiatement si le titre est déjà visible (par exemple, si la page est rechargée en position de défilement au milieu du titre).
-//   if (window.scrollY + windowHeight / 2 >= visionTitle.getBoundingClientRect().top) {
-//     handleScroll();
-//   }
-// });
 </script>

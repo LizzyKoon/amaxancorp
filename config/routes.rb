@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   get "/mentions_legales", to: "mentions_legales#index"
 
+  get "/cookies", to: "cookies#index"
+
   get "/conseil", to: "pages#conseil"
 
 

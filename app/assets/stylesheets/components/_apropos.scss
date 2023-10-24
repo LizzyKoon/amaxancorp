@@ -42,6 +42,9 @@
     transition: transform 2s ease, opacity 2s ease;
     transform: translateX(-100%);
     opacity: 0;
+    p {
+      text-align: justify;
+    }
   }
 
   .fade-in {

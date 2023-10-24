@@ -96,7 +96,8 @@
 .banner-expertise-home {
   padding-left: 0;
   padding-right: 0;
-  // height: 100vh;
+  height: 100vh;
+  margin: 0;
 
   h1 {
     align-items: center;
@@ -122,8 +123,9 @@
   }
 }
 
-#apropos, #contact, #conseil {
-  margin: 0;
+
+#apropos, #contact, #conseil, #expertises {
+  margin: 0 !important;
 }
 
 .banner-gradient {
@@ -138,6 +140,33 @@
   margin: 0;
   text-align: center;
 }
+
+.methodologie-1,
+.methodologie-2 {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 36px;
+  h2 {
+    text-align: left;
+    font-size: 24px;
+  }
+}
+
+.methodologie-2 {
+  p {
+    margin-top: 64px;
+    text-align: justify;
+  }
+}
+
+.large-number {
+  font-size: 50px;
+
+  h2 span {
+    font-size: 36px;
+  }
+}
+
 
 .banner-contact {
   height: 100vh;
@@ -288,6 +317,33 @@
     margin: 0;
   }
 
+  .methodologie-1,
+  .methodologie-2 {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 36px;
+
+    h2 {
+      text-align: left;
+      font-size: 24px;
+    }
+  }
+
+  .methodologie-2 {
+    p {
+      margin-top: 64px;
+      text-align: justify;
+    }
+  }
+
+  .large-number {
+    font-size: 50px;
+
+    h2 span {
+      font-size: 36px;
+    }
+  }
+
   .banner-contact {
     h1 {
       align-items: left;
@@ -364,6 +420,34 @@
   .banner-home h1:nth-child(2) {
     margin-top: 10px;
   }
+
+  .methodologie-1,
+  .methodologie-2 {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 36px;
+
+    h2 {
+      text-align: left;
+      font-size: 24px;
+    }
+  }
+
+  .methodologie-2 {
+    p {
+      margin-top: 64px;
+      text-align: justify;
+    }
+  }
+
+  .large-number {
+    font-size: 50px;
+
+    h2 span {
+      font-size: 36px;
+    }
+  }
+
 
 
   .banner-contact {

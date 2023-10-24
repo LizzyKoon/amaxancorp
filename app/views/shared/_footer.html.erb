@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<nav class="footer">
-  <div class="container-navbar">
-    <%= link_to root_path do %>
-      <%= image_tag("logo-amaxan-bleu.jpg", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
-    <% end %>
-    <div class="footer-links">
-      <a href="https://fr.linkedin.com/in/andre-audibert-154a501a1"><i class="fab fa-linkedin"></i></a>
-      <p>Téléphone : +33 6 43 83 18 04</p>
-      <p>Email : <a href="mailto:andre.audibert@amaxan.fr">andre.audibert@amaxan.fr</a></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Your existing CSS styles here */
+    @media screen and (min-width: 768px) {
+
+    .footer {
+    background-color: white;
+    height: 192px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 !important;
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+
+    @media screen and (max-width: 768px) {
+
+
+    }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar sticky-top">
+    <div class="container-navbar">
+      <%= link_to root_path do %>
+        <%= image_tag("logo-amaxan-bleu.jpg", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
+      <% end %>
+      <ul class="desktop-menu">
+        <!-- Place your desktop menu items here -->
+        <li>+33 6 43 83 18 04</li>
+        <li><a href="mailto:andre.audibert@amaxan.fr">andre.audibert@amaxan.fr</a></li>
+        <li><%= link_to "Mentions Légales", mentions_legales_path %></li>
+        <li><%= link_to "Cookies", cookies_path %></li>
+      </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
