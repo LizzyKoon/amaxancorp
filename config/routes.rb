@@ -51,10 +51,10 @@ Rails.application.routes.draw do
   get '/impots', to: 'impots#index', as: 'impots'
   # Nom du fichier HTML : impots.html.erb
 
-    # Route pour générer un lien temporaire
-    get '/generer-lien', to: 'access_tokens#generate', as: 'generer_lien'
+    # # Route pour générer un lien temporaire
+    # get '/generer-lien', to: 'access_tokens#generate', as: 'generer_lien'
 
-    # Route pour valider un lien temporaire
-    get '/acces/:token', to: 'access_tokens#validate', as: 'valider_acces'
+    # # Route pour valider un lien temporaire
+    # get '/acces/:token', to: 'access_tokens#validate', as: 'valider_acces'
 
 end
