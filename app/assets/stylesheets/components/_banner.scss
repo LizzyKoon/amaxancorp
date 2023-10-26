@@ -1,3 +1,5 @@
+@media screen and (min-width: 1024px) {
+
 .banner {
   padding: 96px;
 
@@ -87,10 +89,6 @@
     text-align: center;
     text-underline-position: auto;
   }
-}
-
-.banner-apropos {
-  height: 100vh;
 }
 
 .banner-expertise-home {
@@ -186,6 +184,8 @@
 
 .blue {
   color: $blue;
+}
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

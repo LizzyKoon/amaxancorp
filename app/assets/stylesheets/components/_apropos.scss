@@ -57,7 +57,7 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .container-apropos-content {
     flex-direction: column;
-    margin:0; /* Align items at the top for smaller screens */
+    margin:0;
   }
 
   .apropos-text-large-screen {
@@ -99,8 +99,6 @@
   }
 
 }
-
-
 /* Styles for smaller screens */
 @media screen and (max-width: 768px) {
   .container-apropos-content {
