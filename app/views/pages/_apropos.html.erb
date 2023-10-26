@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+
 <div class="banner banner-beige banner-apropos blue">
-  <div class="container">
-      <h1 class="vision-title">Notre Vision.</h1>
-      <div class="container-apropos-content">
-          <div class="apropos-text-large-screen">
+  <div class="wrapper-expertise">
+      <h1>Notre Vision.</h1>
+      <div class="container-expertise-content">
+          <%= image_tag("chantier.jpg", alt: "chantier", id: "chantier") %>
+          <div class="expertise-text">
             <strong>AMAXAN</strong> est dirigé par André AUDIBERT, Conseil en gestion de patrimoine et Conseil en Investissements Financiers,
             titulaire d’un Master en Gestion de patrimoine (AUREP) et d'un Diplôme supérieur de Banque (ITB).
             Je suis un professionnel de vos intérêts depuis 1994, je bâtis pour chaque client une stratégie sur mesure.
@@ -19,32 +20,10 @@
             de sa fiscalité ou plus largement pour mettre en place une stratégie globale d’enrichissement.
             Véritable service administratif de vos intérêts, nous optimiserons votre temps et la valeur de votre patrimoine.
           </div>
-            <div class="image-container-large-screen">
-            <%= image_tag("andre-henri-audibert.jpg", alt: "andre-henri-audibert", id: "andre-henri-audibert") %>
-          </div>
-          <div class="apropos-text-small-screen">
-            <strong>AMAXAN</strong> est dirigé par André AUDIBERT, Conseil en gestion de patrimoine et Conseil en Investissements Financiers,
-            titulaire d’un Master en Gestion de patrimoine (AUREP) et d'un Diplôme supérieur de Banque (ITB).
-            Je suis un professionnel de vos intérêts depuis 1994, je bâtis pour chaque client une stratégie sur mesure.
-            Je leur propose des placements et des solutions pour résister aux aléas économique et fiscaux.
-            Je surveille leur évolution et les informe régulièrement.<br>
-            </br>
-            <strong>AMAXAN</strong> se positionne comme un maitre d’œuvre à forte valeur ajoutée qui
-            s’adresse à une clientèle exigeante qui ne trouvent plus de solutions,
-            de conseils ni de suivi auprès de leur interlocuteurs habituels: banques, gestion privée, courtiers, etc. <br>
-            </br>
-            Fédérateurs de métiers complémentaires, <strong>AMAXAN</strong> s’adresse à tous quel que soit la surface patrimoniale pour
-            répondre soit à une problématique ponctuelle touchant un élément de son patrimoine,
-            de sa fiscalité ou plus largement pour mettre en place une stratégie globale d’enrichissement.
-            Véritable service administratif de vos intérêts, nous optimiserons votre temps et la valeur de votre patrimoine.
-          </div>
-    </div>
+      </div>
   </div>
 </div>
 
-<div class="image-container-small-screen">
-  <%= image_tag("andre-henri-audibert.jpg", alt: "andre-henri-audibert", id: "andre-henri-audibert") %>
-</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -75,4 +54,27 @@ document.addEventListener("DOMContentLoaded", function () {
     handleScroll();
   }
 });
+
+// Cette fonction calcule et définit la hauteur de la page en fonction de la hauteur du contenu.
+function setPageHeight() {
+  var windowHeight = window.innerHeight;
+  var contentHeight = document.querySelector(".container-expertise-content").offsetHeight;
+  var banner = document.querySelector(".banner-apropos");
+
+  // Définir la hauteur de la page sur la hauteur du contenu.
+  if (contentHeight > windowHeight) {
+    banner.style.height = contentHeight + "px";
+  } else {
+    banner.style.height = windowHeight + "px";
+  }
+}
+
+// Appeler la fonction lorsque le DOM est prêt.
+document.addEventListener("DOMContentLoaded", function () {
+  setPageHeight();
+
+  // Ajouter un écouteur d'événement de redimensionnement pour recalculer la hauteur de la page en cas de redimensionnement de la fenêtre.
+  window.addEventListener("resize", setPageHeight);
+});
+
 </script>
