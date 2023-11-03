@@ -18,12 +18,15 @@
   }
 }
 
-.banner-home {
-  background-image: url(asset_path('checkerboard.jpg'));
+.banner-accueil {
+  background-image: url(asset_path('checkerboard.png'));
+  min-height: calc(100vh - 96px);
   align-items: center;
   background-size: cover;
+  background-position: center;
   display: flex;
-  position: absolute;
+  justify-content: space-around;
+  width: 100%;
   h1 {
     align-items: center;
     font-weight: bold;
