@@ -1,0 +1,130 @@
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+}
+
+.title-faq {
+  background-color: white;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: sticky;
+  text-align: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 96px; /* Réglez la hauteur en fonction de votre bannière */
+  z-index: 100; /* Au-dessus de la bannière d'accueil */
+}
+
+.title-faq h1 {
+  align-items: center;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: $headers-font;
+  letter-spacing: 1px;
+  color: $blue;
+}
+/* Le reste de votre code CSS reste inchangé */
+.faq-container {
+  flex-grow: 1;
+  padding: 0;
+  background-color: white;
+  max-height: calc(100vh - 150px);
+  // overflow-y: auto;
+  margin-top: 48px;
+  margin-bottom: 96px;
+  z-index: 80;
+  overflow: scroll; /* Ajoutez une marge pour éviter de superposer le contenu sous la bannière et le titre FAQ */
+}
+
+.accordion {
+  color: $blue;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  border: none;
+  outline: none; /* Transition pour le fond et la couleur du texte */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Applique le dégradé lors du survol */
+.accordion:hover {
+  background: linear-gradient($blue-pastel, $pink-pastel);
+  color: white;
+}
+
+/* Applique une classe pour le fond gris */
+.accordion.gray-bg {
+  background: #f5f5f5;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.accordion.opened {
+  background: linear-gradient($blue-pastel, $pink-pastel);
+  color: white;
+}
+
+/* Ajout de position et overflow pour les questions FAQ */
+.accordion.open + .pannel {
+  background-color: white;
+  position: relative;
+  overflow: auto; /* Ajout du défilement vertical pour les réponses */
+  max-height: 300px; /* Réglez la hauteur maximale souhaitée */
+  padding: 2rem; /* Ajoutez un espace pour le contenu */
+}
+
+
+.pannel p {
+  color: $blue;
+  font-family: $body-font;
+  text-align: justify;
+  font-size: 16px;
+  padding-top: 16px;
+}
+
+.faq {
+  border: none;
+  margin: 10px 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.faq.open {
+  border: none;
+  background-color: white;
+}
+
+.open {
+  background: linear-gradient($blue-pastel, $pink-pastel);
+  color: white; /* Pour changer la couleur du texte en blanc lorsque la question est ouverte */
+}
+
+.wrapper-home {
+  margin: auto;
+}
+
+.faq-home-container {
+  flex-grow: 1;
+  padding: 0;
+  background-color: white;
+  max-height: calc(100vh - 150px);
+  // overflow-y: auto;
+  margin-top: 48px;
+  margin-bottom: 96px;
+  z-index: 80; /* Ajoutez une marge pour éviter de superposer le contenu sous la bannière et le titre FAQ */
+}
+
+.faq-home {
+  border: none;
+  margin: 10px 0;
+  transition: opacity 0.3s ease-in-out;
+}

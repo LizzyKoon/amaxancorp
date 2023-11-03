@@ -1,22 +1,25 @@
-<div class="banner-home white">
-  <div class="container">
-    <h1>Conseil en Gestion de Patrimoine</h1>
-     <h1>et Investissements Financiers</h1>
-    <a class="button-48" href="#">EN SAVOIR PLUS</a>
-  </div>
+<!DOCTYPE html>
+
+<a id="accueil">
+  <%= render "accueil" %>
+</a>
+
+<a id="conseil">
+  <%= render "conseil" %>
+</a>
+
+<a id="expertises">
+  <%= render "expertises" %>
+</a>
+
+<div id="apropos">
+  <%= render "apropos" %>
 </div>
 
-<%= render "conseil" %>
+<div id="methodologie">
+  <%= render "methodologie" %>
+</div>
 
-<%= render "expertises" %>
-
-<%= render "vision" %>
-
-<%= render "approche" %>
-
-
-<div class="banner banner-beige CTA blue">
-  <div class="container">
-    <h1>Faire grandir et préserver son patrimoine.</h1>
-  </div>
+<div id="contact">
+  <%= render "contact/contact" %>
 </div>

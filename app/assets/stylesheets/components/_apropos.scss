@@ -1,0 +1,28 @@
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .vision-title .small-text-methodologie {
+    transition: transform 2s ease, opacity 2s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .fade-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+/* Styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .vision-title .small-text-methodologie {
+    transition: transform 2s ease, opacity 2s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .fade-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}

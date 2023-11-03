@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $body-font; /* Utilisez la police Roboto depuis Google Fonts */
+}
+
+.banner-expertise {
+  background-image: url(asset_path('checkerboard.jpg'));
+  height: 233px;
+  align-items: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+}
+
+.banner .expertise-text h3 {
+  clear: both;
+}
+
+.banner-intro-expertise {
+  padding-top: 48px;
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-bottom: 96px;
+  h1 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  h2 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  h3 {
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: $headers-font;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-top: 20px;
+  }
+  h3:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.container-expertise-content {
+  margin: 0;
+  h1 {
+    padding-top: 30px;
+  }
+  h2 {
+    padding-top: 30px;
+    text-align: left;
+  }
+  h3 {
+    padding-top: 20px;
+    // text-align: left;
+  }
+}
+
+.clear h3 {
+  padding-top: 20px;
+}
+
+.wrapper-expertise {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.expertise-text {
+  margin: 0;
+  text-align: justify;
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-between;
+  margin:0;
+}
+
+.list-container .list {
+  list-style: none;
+  padding: 0;
+  width: 50%; /* Set a fixed width for each list (50% for two columns) */
+}
+
+/* Ajoutez une règle media query pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+  .banner-expertise {
+    background-size: contain;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .banner-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise {
+    padding: 24px;
+  }
+
+  .banner-intro-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise h2 {
+    font-size: 20px;
+  }
+
+  .banner-intro-expertise h3 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+.container-expertise-content {
+  margin-top: 20px;
+}
+
+.wrapper-expertise {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.expertise-text {
+  margin: 0;
+  text-align: justify;
+}
+
+.list-container {
+  display: block;
+  justify-content: space-between;
+  margin:0;
+}
+
+.list-container .list {
+  list-style: none;
+  padding: 0;
+  width: 100%; /* Set a fixed width for each list (50% for two columns) */
+}
+
+  /* Réglez les styles pour les écrans de taille moyenne ici */
+}
+
+/* Le reste de votre code CSS reste inchangé */
+
+@media (max-width: 768px) {
+  .banner-expertise {
+    background-size: contain;
+    padding: 10px;
+    text-align: center;
+    height: 120px;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    }
+
+  .banner-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise {
+    padding: 0;
+  }
+
+  .banner-intro-expertise h1 {
+    font-size: 24px;
+  }
+
+  .banner-intro-expertise h2 {
+    font-size: 20px;
+  }
+
+  .banner-intro-expertise h3 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .container-expertise {
+    margin: 32px;
+  }
+
+  .container-expertise-content {
+    clear: both;
+  }
+
+  // .container-expertise-content img {
+  //   width: 100%; /* La largeur de l'image occupera toute la largeur de son contenant */
+  //   float: none; /* Annuler la flottaison de l'image */
+  // }
+
+  .wrapper-expertise {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .image-container-buildings {
+    width: 33%; /* Image prend 1/3 de la largeur */
+    float: left; /* Image takes 1/3 of the width */
+  }
+
+  .expertise-text {
+    width: 100%;
+    text-align: justify;
+   /* Texte prend 2/3 de la largeur */
+    float: left;
+    padding: 20px; //* Add some padding to separate text from the image */
+  }
+  .list-container {
+    display: block;
+    justify-content: space-between;
+    margin:0;
+  }
+
+  .list-container .list {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Set a fixed width for each list (50% for two columns) */
+  }
+}

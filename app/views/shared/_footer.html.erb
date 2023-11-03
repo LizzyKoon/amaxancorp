@@ -1,11 +1,13 @@
-<div class="footer">
-  <div class="footer-copyright">
+<nav class="navbar">
+  <div class="container-navbar">
+    <%= link_to root_path do %>
+      <%= image_tag("logo-amaxan-bleu.jpg", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
+    <% end %>
+    <ul class="desktop-menu">
+      <!-- Place your desktop menu items here -->
+      <%# <li><a href="mailto:andre.audibert@amaxan.fr">andre.audibert@amaxan.fr</a></li> %>
+      <li><%= link_to "Mentions Légales", mentions_legales_path %></li>
+      <li><%= link_to "Cookies", cookies_path %></li>
+    </ul>
   </div>
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-</div>
+</nav>

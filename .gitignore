@@ -19,13 +19,18 @@
 !/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+# /storage/*
+# !/storage/.keep
+# /tmp/storage/*
+# !/tmp/storage/
+# !/tmp/storage/.keep
 
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ajoutez la ligne suivante pour ignorer le fichier .env
+.env
+.env*
+

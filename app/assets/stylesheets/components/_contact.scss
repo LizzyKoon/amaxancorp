@@ -1,0 +1,203 @@
+
+@media (min-width: 768px) {
+
+  .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      // margin: 36px;
+  }
+
+  .contact-info {
+      margin-left: 0;
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0;
+      h1 {
+          margin-top: 30px;
+          margin-bottom: 10px;
+      }
+  }
+
+  .contact-form {
+      flex: 2;
+      margin: 0;
+      background-color: white;
+      border-radius: 5px;
+      padding-top: 30px;
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 66%;
+  }
+
+  .contact-form h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+
+  .contact-details {
+      margin: 0;
+      padding-top: 10%;
+  }
+
+  .contact-phone,
+  .contact-email {
+      display: flex;
+      align-items: center;
+      margin: 0;
+  }
+
+  .contact-phone i,
+  .contact-email i {
+      color: #070b81;
+      margin-right: 10px;
+  }
+
+  .form-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .form-group {
+      flex: 1;
+      margin: 10px;
+  }
+
+  .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #f1efef;
+      border-radius: 5px;
+      margin: 0;
+      color: #999;
+  }
+
+  .form-group.wide-input {
+      width: 100%;
+  }
+
+  .select2-container--default .select2-selection--multiple {
+    border: 1px solid #f1efef;
+
+  }
+
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border: none !important;
+    padding-right: 10px;
+  }
+
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    color: $blue;
+    border: none !important;
+  }
+
+  #message {
+      width: 100%;
+      height: 200px;
+      color: $blue;
+  }
+
+  #message::placeholder {
+      color: #999;
+      font-weight: 100;
+  }
+
+  #confirmation-message {
+    color: $blue;
+  }
+
+  .contact-form-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .button-form {
+      width: 100%;
+      padding: 10px;
+      background-color: #070B81;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .button-form-block {
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      margin: 0;
+      margin-left: 10px;
+      margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  /* Adjust form inputs */
+
+  .contact-container {
+    padding: 36px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 8px; /* Adjust padding for better spacing */
+    font-size: 14px; /* Reduce font size for mobile */
+    border: none; /* Remove border for cleaner look */
+    border-radius: 0; /* Remove border-radius */
+  }
+
+  /* Adjust Select2 styles for mobile */
+  .select2-container--default .select2-selection--multiple,
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    padding: 5px; /* Reduce padding for Select2 */
+  }
+
+  /* Adjust textarea */
+  #message {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
+    height: 150px; /* Reduce height for mobile */
+    font-size: 14px; /* Reduce font size for mobile */
+  }
+
+  /* Adjust margins and spacing */
+  .form-group {
+    margin: 5px; /* Reduce margin for form elements */
+  }
+
+  .form-group label {
+    margin-bottom: 3px; /* Reduce margin below labels */
+  }
+
+  .button-form {
+    width: 100%;
+    padding: 10px;
+    background-color: #070B81;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button-form-block {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    margin: 0; /* Remove margin setting to prevent pushing the button down */
+  }
+}
