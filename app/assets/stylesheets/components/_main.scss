@@ -23,7 +23,6 @@
   align-items: center;
   background-size: cover;
   display: flex;
-  position: absolute;
   h1 {
     align-items: center;
     font-weight: bold;
@@ -80,7 +79,6 @@
     font-size: 18px;
     font-family: $headers-font;
     letter-spacing: 2.1px;
-    text-align: center;
     text-underline-position: auto;
   }
 }
