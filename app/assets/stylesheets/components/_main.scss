@@ -2,7 +2,6 @@
 
 .banner {
   padding: 96px;
-  min-height: 100vh;
   height: auto;
   h1, h2, h3 {
     font-weight: bold;
@@ -15,29 +14,6 @@
   }
   h2, h3 {
     font-size: 20px;
-  }
-}
-
-.banner-home {
-  background-image: url(asset_path('checkerboard.jpg'));
-  align-items: center;
-  background-size: cover;
-  display: flex;
-  h1 {
-    align-items: center;
-    font-weight: bold;
-    font-size: 36px;
-    font-family: $headers-font;
-    letter-spacing: 1px;
-    text-align: left;
-  }
-
-  h2 span {
-    font-size: 24px;
-  }
-
-  .container {
-    margin-left: 100px;
   }
 }
 
@@ -155,10 +131,19 @@
 }
 
 .banner-contact {
-  height: 100vh;
+  padding: 96px;
+  height: auto;
+  h1, h2, h3 {
+    font-weight: bold;
+    font-family: $headers-font;
+    letter-spacing: 2.1px;
+    text-underline-position: auto;
+  }
   h1 {
-    align-items: left;
-    text-align: left;
+    font-size: 36px;
+  }
+  h2, h3 {
+    font-size: 20px;
   }
 }
 

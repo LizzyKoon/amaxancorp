@@ -1,7 +1,45 @@
-<div class="banner-home white">
-  <div class="container">
-    <h1 class="title">Conseil en Gestion de Patrimoine</h1>
-    <h1>Conseil en Investissements Financiers</h1>
-    <%= link_to("EN SAVOIR PLUS", root_path(anchor: 'conseil'), class: "button-cover") %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma Page HTML</title>
+  <style>
+    .banner-damier {
+      background-image: url('/assets/checkerboard.jpg'); /* Chemin relatif vers l'image */
+      background-size: cover; /* Ajustez la taille de l'image pour couvrir tout l'élément */
+      background-repeat: no-repeat; /* Empêchez la répétition de l'image */
+      height: calc(100vh - 50px);
+      display: flex;
+      align-items: center;
+    }
+
+    .banner-damier h1 {
+      font-weight: bold;
+      font-size: 36px;
+      font-family: $headers-font;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .banner-damier h1.title {
+      align-items: center;
+    }
+
+    .banner-damier h2 span {
+      font-size: 24px;
+    }
+
+    .banner-damier .container {
+      margin-left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-damier banner-gradient white">
+    <div class="container">
+      <h1 class="title">Conseil en Gestion de Patrimoine</h1>
+      <h1>Conseil en Investissements Financiers</h1>
+      <%= link_to("EN SAVOIR PLUS", root_path(anchor: 'conseil'), class: "button-cover") %>
+    </div>
   </div>
-</div>
+</body>
+</html>
