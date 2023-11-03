@@ -1,5 +1,5 @@
 @media screen and (min-width: 768px) {
-#family, #buildings-purple, #buildings-blue, #retraite, #fusee, #labyrinthe, #impots, #foret {
+#family, #chantier, #retraite, #fusee, #labyrinthe, #impots, #foret {
   // max-height: 600px;
   // max-width: 400px;
   max-height: 100%;
@@ -11,6 +11,13 @@
 #palmiers, #alpinisme {
   max-height: 450px;
   max-width: 300px;
+  float: right;
+  margin-left: 25px;
+}
+
+#profil, #buildings-purple {
+  max-height: 400px;
+  max-width: 350px;
   float: right;
   margin-left: 25px;
 }

@@ -1,0 +1,18 @@
+<!-- app/views/access_tokens/generate.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Générer un lien temporaire</title>
+</head>
+<body>
+  <h1>Générer un lien temporaire</h1>
+
+  <p>Voici votre lien temporaire :</p>
+  <a href="<%= @link %>">Lien temporaire</a>
+
+  <p>Ce lien expirera le <%= @expiration %>.</p>
+
+  <!-- Autres éléments HTML de votre choix -->
+
+</body>
+</html>

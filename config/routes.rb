@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'access/Tokens'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   post '/contact', to: 'contact#create'
   get '/contact/confirmation', to: 'contact#confirmation'
 
+  get "/accueil", to: "pages#accueil"
+
   get "/apropos", to: "pages#apropos"
 
   get "/methodologie", to: "pages#methodologie"
@@ -16,6 +19,8 @@ Rails.application.routes.draw do
   get "/expertises", to: "pages#expertises"
 
   get "/mentions_legales", to: "mentions_legales#index"
+
+  get "/cookies", to: "cookies#index"
 
   get "/conseil", to: "pages#conseil"
 
@@ -47,4 +52,11 @@ Rails.application.routes.draw do
   # Page Impots
   get '/impots', to: 'impots#index', as: 'impots'
   # Nom du fichier HTML : impots.html.erb
+
+    # # Route pour générer un lien temporaire
+    # get '/generer-lien', to: 'access_tokens#generate', as: 'generer_lien'
+
+    # # Route pour valider un lien temporaire
+    # get '/acces/:token', to: 'access_tokens#validate', as: 'valider_acces'
+
 end

@@ -1,89 +1,5 @@
-/* Styles for large screens */
-
-@media screen and (min-width: 1024px) {
-
-  .container-apropos-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Make both containers stretch vertically */
-    margin-top: 64px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .apropos-text-large-screen {
-    flex: 1;
-    margin: 0;
-    text-align: justify;
-  }
-
-  .image-container-large-screen {
-    flex: 1;
-    max-width: 360px;
-    display: flex;
-    align-items: center;
-  }
-
-  .image-container-large-screen img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-
-  .apropos-text-small-screen {
-    display: none;
-  }
-  .image-container-small-screen {
-    display: none;
-  }
-
-  .vision-title .small-text-methodologie {
-    transition: transform 2s ease, opacity 2s ease;
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  .fade-in {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-}
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .container-apropos-content {
-    flex-direction: column;
-    margin:0; /* Align items at the top for smaller screens */
-  }
-
-  .apropos-text-large-screen {
-    align-items: center;
-    padding-top: 36px;
-    padding-right: 0;
-    padding-left: 0;
-    text-align: justify;
-    margin: 0;
-  }
-
-  .image-container-large-screen {
-    display: flex;
-    max-width: 100%; /* Set a maximum width for the image */
-    margin: 0;
-    padding-top: 36px;
-    /* Preserve the image's aspect ratio */
-    img {
-      width: auto; /* Allow the image to resize based on the container */
-      height: 100%;
-      max-width: 100%; /* Ensure the image doesn't exceed its container */
-    }
-  }
-
-  .apropos-text-small-screen,
-  .image-container-small-screen {
-    display: none;
-  }
-
   .vision-title .small-text-methodologie {
     transition: transform 2s ease, opacity 2s ease;
     transform: translateX(-100%);
@@ -96,35 +12,8 @@
   }
 
 }
-
-
 /* Styles for smaller screens */
 @media screen and (max-width: 768px) {
-  .container-apropos-content {
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 0;
-    margin-right: 0;/* Align items at the top for smaller screens */
-  }
-
-  .apropos-text-small-screen {
-    padding-top: 36px;
-    padding-right: 0;
-    padding-left: 0;
-    text-align: justify;
-  }
-
-  .apropos-text-large-screen,
-  .image-container-large-screen {
-    display: none;
-  }
-
-  .image-container-small-screen img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
-
   .vision-title .small-text-methodologie {
     transition: transform 2s ease, opacity 2s ease;
     transform: translateX(-100%);

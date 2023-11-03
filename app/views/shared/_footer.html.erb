@@ -1,10 +1,13 @@
-<nav class="footer">
+<nav class="navbar">
   <div class="container-navbar">
     <%= link_to root_path do %>
-      <%= image_tag("logo-amaxan-bleu.png", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
+      <%= image_tag("logo-amaxan-bleu.jpg", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
     <% end %>
-    <div class="footer-links">
-    <a href="https://fr.linkedin.com/in/andre-audibert-154a501a1"><i class="fab fa-linkedin"></i></a>
-  </div>
+    <ul class="desktop-menu">
+      <!-- Place your desktop menu items here -->
+      <%# <li><a href="mailto:andre.audibert@amaxan.fr">andre.audibert@amaxan.fr</a></li> %>
+      <li><%= link_to "Mentions Légales", mentions_legales_path %></li>
+      <li><%= link_to "Cookies", cookies_path %></li>
+    </ul>
   </div>
 </nav>

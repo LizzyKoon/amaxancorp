@@ -10,7 +10,7 @@ class ContactController < ApplicationController
     message = params[:message]
 
     # Envoi du message par e-mail
-    ContactMailer.contact_email(nom, email, telephone, expertises, message).deliver_now
+    ContactMailer.contact_email(nom, email, telephone, expertises, message).deliver
 
     # Redirigez l'utilisateur vers une page de confirmation
     redirect_to contact_confirmation_path

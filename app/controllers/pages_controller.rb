@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   def apropos
   end
 
+  def expertises
+  end
+
   def methodologie
   end
 
