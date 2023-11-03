@@ -8,9 +8,16 @@
   margin-right: 25px;
 }
 
-#palmiers, #alpinisme, #buildings-purple, #profil {
+#palmiers, #alpinisme {
   max-height: 450px;
   max-width: 300px;
+  float: right;
+  margin-left: 25px;
+}
+
+#profil, #buildings-purple {
+  max-height: 400px;
+  max-width: 350px;
   float: right;
   margin-left: 25px;
 }

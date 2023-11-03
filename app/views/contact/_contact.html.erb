@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div class="banner banner-beige banner-contact blue">
+<div class="banner banner-beige blue">
   <div class="contact-container">
       <div class="contact-info">
           <h1>Contact</h1>
@@ -22,7 +22,7 @@
               </div>
           </div>
       </div>
-      <div class="contact-form">
+      <%# <div class="contact-form">
           <form action="/contact" method="post">
             <div class="contact-form-grid-2">
               <div class="form-group">
@@ -53,53 +53,11 @@
                   <textarea id="message" name="message" class="wide-input" placeholder="Message" required style="font-weight: lighter;"></textarea>
               </div>
               <div class="button-form-block">
-                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                <input type="submit" value="ENVOYER" data-wait="Please wait" class="button-form">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>
+                <%# <input type="submit" name="commit" value="ENVOYER" class="button-form">
               </div>
             </div> <!-- Bouton sous le champ de message -->
         </form>
-      </div>
+      </div> %>
   </div>
 </div>
-
-<!-- Inclure jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Inclure le CSS de Select2 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-
-<!-- Inclure le JavaScript de Select2 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-
-<script>
-$(document).ready(function() {
-  // Initialiser Select2 sur l'élément select
-  $('#expertise').select2({
-    placeholder: 'Sélectionner', // Texte de remplacement
-    allowClear: true, // Option de suppression de la sélection
-    closeOnSelect: false, // Conserver la boîte déroulante ouverte après la sélection
-  });
-
-  // Fonction pour ajuster la hauteur de la boîte de sélection Select2
-  function adjustSelect2Height() {
-    var select2Container = $('.select2-container--open'); // Obtenir le conteneur Select2
-    var select2Results = select2Container.find('.select2-results'); // Obtenir la liste des résultats
-
-    // Calculer la hauteur en fonction du nombre d'éléments sélectionnés
-    var selectedItems = $('#expertise').val();
-    var height = selectedItems ? selectedItems.length * 30 : 0; // Ajustez 30 à la hauteur souhaitée pour un élément
-
-    // Définir une hauteur minimale et assurez-vous qu'elle n'est pas trop grande
-    height = Math.min(300, height); // Hauteur maximale de 300 pixels
-
-    // Appliquer la hauteur à la liste des résultats
-    select2Results.css('max-height', height + 'px');
-  }
-
-  // Appeler la fonction initialement et à chaque sélection ou désélection d'élément
-  adjustSelect2Height();
-  $('#expertise').on('change', function() {
-    adjustSelect2Height();
-  });
-});
-</script>

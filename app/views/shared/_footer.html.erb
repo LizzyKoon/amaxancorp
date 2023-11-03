@@ -1,45 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Your existing CSS styles here */
-    @media screen and (min-width: 768px) {
-
-    .footer {
-    background-color: white;
-    height: 192px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 !important;
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-
-    @media screen and (max-width: 768px) {
-
-
-    }
-    }
-  </style>
-</head>
-<body>
-  <nav class="navbar sticky-top">
-    <div class="container-navbar">
-      <%= link_to root_path do %>
-        <%= image_tag("logo-amaxan-bleu.jpg", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
-      <% end %>
-      <ul class="desktop-menu">
-        <!-- Place your desktop menu items here -->
-        <li>+33 6 43 83 18 04</li>
-        <li><a href="mailto:andre.audibert@amaxan.fr">andre.audibert@amaxan.fr</a></li>
-        <li><%= link_to "Mentions Légales", mentions_legales_path %></li>
-        <li><%= link_to "Cookies", cookies_path %></li>
-      </ul>
-    </div>
-  </nav>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</body>
-</html>
+<nav class="navbar">
+  <div class="container-navbar">
+    <%= link_to root_path do %>
+      <%= image_tag("logo-amaxan-bleu.jpg", alt: "logo-amaxan-bleu", id: "logo-amaxan-bleu") %>
+    <% end %>
+    <ul class="desktop-menu">
+      <!-- Place your desktop menu items here -->
+      <%# <li><a href="mailto:andre.audibert@amaxan.fr">andre.audibert@amaxan.fr</a></li> %>
+      <li><%= link_to "Mentions Légales", mentions_legales_path %></li>
+      <li><%= link_to "Cookies", cookies_path %></li>
+    </ul>
+  </div>
+</nav>

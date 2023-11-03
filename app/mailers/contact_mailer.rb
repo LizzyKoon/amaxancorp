@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default from: 'audibert.maxence@gmail.com' # Remplacez par votre adresse e-mail Gmail
+  default from: 'andre.audibert@amaxan.fr' # Remplacez par votre adresse e-mail Gmail
 
   def contact_email(nom, email, telephone, expertises, message)
     @nom = nom
@@ -8,6 +8,6 @@ class ContactMailer < ApplicationMailer
     @expertises = expertises
     @message = message
 
-    mail(to: 'audibert.maxence@gmail.com', subject: 'Nouveau message depuis le site Amaxan')
+    mail(to: 'andre.audibert@amaxan.fr', subject: 'Nouveau message depuis le site Amaxan')
   end
 end

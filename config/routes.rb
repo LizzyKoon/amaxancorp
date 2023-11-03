@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post '/contact', to: 'contact#create'
   get '/contact/confirmation', to: 'contact#confirmation'
 
+  get "/accueil", to: "pages#accueil"
+
   get "/apropos", to: "pages#apropos"
 
   get "/methodologie", to: "pages#methodologie"
