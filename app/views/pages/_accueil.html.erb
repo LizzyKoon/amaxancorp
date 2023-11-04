@@ -20,6 +20,10 @@
       text-align: left;
     }
 
+     .banner-damier h1.title::first-letter {
+      font-size: 56px; /* Augmentez la taille de la première lettre */
+    }
+
     .banner-damier h1.title {
       align-items: center;
     }
@@ -37,7 +41,7 @@
   <div class="banner-damier banner-gradient white">
     <div class="container">
       <h1 class="title">Conseil en Gestion de Patrimoine</h1>
-      <h1>Conseil en Investissements Financiers</h1>
+      <h1 class="title">Conseil en Investissements Financiers</h1>
       <%= link_to("EN SAVOIR PLUS", root_path(anchor: 'conseil'), class: "button-cover") %>
     </div>
   </div>
