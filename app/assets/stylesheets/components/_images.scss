@@ -1,5 +1,5 @@
 @media screen and (min-width: 768px) {
-#family, #chantier, #retraite, #fusee, #labyrinthe, #impots, #foret {
+#family, #retraite, #fusee, #impots, #foret, #chantier {
   // max-height: 600px;
   // max-width: 400px;
   max-height: 100%;
@@ -20,5 +20,11 @@
   max-width: 350px;
   float: right;
   margin-left: 25px;
+}
+
+#labyrinthe {
+  max-height: 500px;
+  max-width: 40%;
+  float: left;
 }
 }
